@@ -1,0 +1,12 @@
+title: Simple Viewer
+image: logo.png
+description: This demo shows a simple viewer.
+priority: 1
+jsfiddle:
+  mapping:
+    html: "index.html"
+    css: "simple.css"
+    js: "simple.js"
+  resources:
+    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
+
