@@ -1,0 +1,65 @@
+{
+  "name": "Classic High Cut Canvas Shoe",
+  "producer": "BeyondMind",
+  "seller": "SampleVendor",
+  "rating": {
+    "ratings": 35266,
+    "stars": 4.08
+  },
+  "stockCount": 85,
+  "detail": {
+    "head": "This shoe is ultimate go-to fashion staple which fits every outfit.",
+    "html": "Classic silhouette with a clean canvas upper, stitch detailing and rubber sole unit."
+  },
+  "price": 3.99,
+  "initLayer": "colors",
+
+  "products": {
+    "colors": {
+      "_": {
+        "name": "colors"
+      },
+      "blueShoe": {
+        "layer": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "img": "blue.jpg",
+        "price": 49.89,
+        "articlenr": 123456,
+        "comment": "Clean blue colorway"
+      },
+      "greenShoe": {
+        "layer": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "img": "green.jpg",
+        "price": 52.99,
+        "articlenr": 423656,
+        "comment": "Modern green colorway"
+      },
+      "redShoe": {
+        "layer": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "img": "red.jpg",
+        "price": 52.99,
+        "articlenr": 326344,
+        "comment": "Daring red colorway"
+      },
+      "brownShoe": {
+        "layer": {
+          "width": "100%",
+          "height": "100%"
+        },
+        "img": "brown.jpg",
+        "price": 52.99,
+        "articlenr": 536236,
+        "comment": "Classic brown colorway"
+      }
+    }
+
+  }
+}
