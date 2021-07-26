@@ -34,7 +34,7 @@ class PDP {
       .then(function (data) {
         // expose loaded product data
         that.productData = data
-        // Start build fsi-layers before rendering other stuff
+        // Start build fsi-viewer before rendering other stuff
         that.buildFSIViewer()
       })
       .catch(function (err) {
@@ -51,21 +51,22 @@ class PDP {
     this.fsiViewerEl.init(containerEl, {
       name: 'articleLayer',
       debug: true,
-      skin: "white",
+      skin: 'white',
       src: '{{{sources.images}}}/shoes/blue.jpg',
       useDevicePixelRatio: true,
-      onReady: () => {
-        this.initProduct()
-      },
     })
+    console.log('viewer init!')
     this.fsiViewerEl.id = 'articleLayer'
     this.fsiViewerEl.start()
+    console.log('start!')
+    this.fsiViewerEl.render()
   }
 
   /*
    Fill the data from json into HTML elements from the template
    */
   initProduct() {
+    console.log('fill init!')
     this.fill('productName', this.productData.name)
     this.fill('productProducer', this.productData.producer)
     this.fill('productSeller', this.productData.seller)
@@ -158,25 +159,6 @@ class PDP {
   /*
   Build FSI Viewer
   */
-  fillLayers(layerElement, groupName, groupData) {
-    layerElement.addGroup('_root', {
-      name: groupName,
-      hidden: true,
-    })
-
-    Object.keys(groupData).forEach((groupKey) => {
-      if (groupKey !== '_') {
-        const layerData = {
-          ...groupData[groupKey].layer,
-          name: this.getLayerName(groupName, groupKey),
-          src: this.srcRoot + '/' + groupData[groupKey].img,
-          hidden: true,
-        }
-
-        layerElement.addLayer(groupName, layerData)
-      }
-    })
-  }
 
   buildLayerSelector(groupName, groupData) {
     const selectorEl = document.createElement('div')
@@ -280,20 +262,18 @@ class PDP {
       this.setSelection(id, null, false)
     }
 
-    // hide/show fsi-layer group
-    this.fsiLayersEl.setProperties(id, { hidden: !visible })
-    this.fsiLayersEl.render()
+    this.fsiViewerEl.render()
 
     this.calcPrice()
   }
 
   showLayer(groupName, name) {
     // hide/show fsi-layer within a group
-    this.fsiLayersEl.setProperties(this.getLayerName(groupName, name), { hidden: false })
+    this.fsiViewerEl.setProperties(this.getLayerName(groupName, name), { hidden: false })
     if (this.getSelection(groupName) !== name) {
-      this.fsiLayersEl.setProperties(this.getLayerName(groupName, this.getSelection(groupName)), { hidden: true })
+      this.fsiViewerEl.setProperties(this.getLayerName(groupName, this.getSelection(groupName)), { hidden: true })
     }
-    this.fsiLayersEl.render()
+    this.fsiViewerEl.render()
 
     this.setSelection(groupName, name, true)
 
