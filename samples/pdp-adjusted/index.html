@@ -13,9 +13,11 @@
   <script src="pdp.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" onload="switchImageSample();">
   <div class="row bg-white p-4 mt-4">
-    <div class="col-md-6 col-sm-12 col-xs-12 sticky-top px-0" id="fsiViewerContainer"></div>
+    <div class="col-md-6 col-sm-12 col-xs-12 sticky-top px-0">
+      <fsi-viewer id="fsiViewerContainer" width="600" height="600" src="{{{sources.images}}}/shoes/green.jpg"></fsi-viewer>
+    </div>
     <div class="col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
       <h1 id="productName" class="display-6"></h1>
       <small>Product by <a href="#" class="link-primary" id="productProducer"></a></small> -
@@ -46,7 +48,13 @@
         </div>
       </div>
       <hr/>
-      <div id="layerSwitches"></div>
+      <div>
+        <div id="img1"><img alt="" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/viewer/shoes/blue.jpg&height=123&format=jpeg" width="123"  /></div>
+
+        <div id="img2"><img alt="" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/viewer/shoes/green.jpg&height=123&format=jpeg" width="123"  /></div>
+
+        <div id="img3"><img alt="" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/viewer/shoes/red.jpg&height=123&format=jpeg" width="123"  /></div>
+        </div>
       <hr/>
       <div class="card-group w-75">
         <div class="card">
@@ -77,6 +85,7 @@
     90 days<br/>
     ** all dimensions, colors and functions can vary
   </p>
+</div>
 </div>
 </body>
 </html>
