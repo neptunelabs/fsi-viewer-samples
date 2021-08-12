@@ -1,18 +1,19 @@
-title: Product Detail Page Simplified
+title: Product Detail Page (Simple)
 image: logo.png
-description: PDP with FSI Viewer and articles build from JSON.
+description: Shows how a simple product detail page could look with FSI Viewer embedded.
+priority: 3
 facts:
   - JS built FSI Viewer
   - zoom and pan
-  - article implementation with JSON
-priority: 6
+  - custom UI
 jsfiddle:
   mapping:
     html: "index.html"
-    js: "pdp.js"
     css: "pdp.css"
+    js: "pdp.js"
   resources:
+    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
+    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
     - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
     - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
     - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
