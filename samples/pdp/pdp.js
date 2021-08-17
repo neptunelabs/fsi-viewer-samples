@@ -1,4 +1,4 @@
-const productDataFile = 'shoe-data.json'
+const productDataFile = 'dress-data.json'
 
 class PDP {
   constructor(dataFile) {
@@ -9,7 +9,7 @@ class PDP {
 
     // Templates defined in project/env.yml and replaced by grunt
     this.fsiServer = '{{{fsi.server}}}/{{{fsi.context}}}'
-    this.srcRoot = '{{{sources.images}}}/shoes'
+    this.srcRoot = '{{{sources.images}}}/json'
     this.assetRoot = '{{{sources.static}}}/product-detail'
 
     this.dataFile = this.fsiServer + '/static/' + this.assetRoot + '/' + dataFile
@@ -51,11 +51,16 @@ class PDP {
     this.fsiViewerEl.init(containerEl, {
       debug: true,
       skin: 'white',
-      imagesrc: '{{{sources.images}}}/shoes/blue.jpg',
+      id: 'image',
+      imagesrc: '{{{sources.images}}}/json/burgundy.jpg',
       useDevicePixelRatio: true,
+      onReady: () => {
+        this.initProduct()
+      },
     })
     console.log('viewer init!')
     this.fsiViewerEl.start()
+
     console.log('start!')
 
   }
@@ -93,7 +98,7 @@ buildLayerAccordion() {
   selAccordionEl.setAttribute('id', 'layerAccordion')
   let isFirstElement = true
   Object.keys(this.productData.products).forEach((groupName) => {
-    this.fillLayers(this.fsiLayersEl, groupName, this.productData.products[groupName])
+    this.startViewer(this.fsiViewerEl, groupName, this.productData.products[groupName])
 
     const selAccordionItemEl = document.createElement('div')
     selAccordionItemEl.classList.add('accordion-item')
@@ -157,22 +162,16 @@ buildLayerAccordion() {
 /*
 Build FSI Layer Groups and Layer nodes
 */
-fillLayers(layerElement, groupName, groupData) {
-  layerElement.addGroup('_root', {
-    name: groupName,
-    hidden: true,
-  })
-
+startViewer(layerElement, groupName, groupData) {
+  let imagesrc;
   Object.keys(groupData).forEach((groupKey) => {
     if (groupKey !== '_') {
-      const layerData = {
-        ...groupData[groupKey].layer,
-        name: this.getLayerName(groupName, groupKey),
-        src: this.srcRoot + '/' + groupData[groupKey].img,
-        hidden: true,
-      }
 
-      layerElement.addLayer(groupName, layerData)
+      imagesrc: this.srcRoot + '/' + groupData[groupKey].img;
+
+      var parameters = {"imagePath" : imagesrc};
+      var viewer = document.getElementById("fsiViewerContainer");
+      viewer.changeImage(parameters)
     }
   })
 }
@@ -292,19 +291,12 @@ handleLayerSelector(id, visible) {
   }
 
   // hide/show fsi-layer group
-  this.fsiLayersEl.setProperties(id, { hidden: !visible })
-  this.fsiLayersEl.render()
 
   this.calcPrice()
 }
 
 showLayer(groupName, name) {
   // hide/show fsi-layer within a group
-  this.fsiLayersEl.setProperties(this.getLayerName(groupName, name), { hidden: false })
-  if (this.getSelection(groupName) !== name) {
-    this.fsiLayersEl.setProperties(this.getLayerName(groupName, this.getSelection(groupName)), { hidden: true })
-  }
-  this.fsiLayersEl.render()
 
   this.setSelection(groupName, name, true)
 
