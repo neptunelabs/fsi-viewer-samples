@@ -2,6 +2,9 @@ title: Simple Viewer
 image: logo.png
 description: This demo shows a simple viewer.
 priority: 1
+acts:
+  - JS built FSI Viewer
+  - zoom and pan
 jsfiddle:
   mapping:
     html: "index.html"
