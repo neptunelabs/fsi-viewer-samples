@@ -7,9 +7,13 @@
   cursor: pointer;
 }
 
-@media screen and (max-width:640px) {
+.viewer {
+  height: 600px;
+}
+
+@media screen and (max-width:840px) {
   .viewer {
-    height: 300px;
+  height: 300px;
     width: 100%;
   }
 }
@@ -40,14 +44,14 @@
 }
 
 .btn-outline-secondary {
-  color: #a6a5aa!important;
-  border-color: #a6a5aa!important;
+  color: #000!important;
+  border-color: #000!important;
 }
 
 .btn-outline-secondary:hover {
-  color: #eeeeee!important;
-  border-color: #eeeeee!important;
-  background-color: #53482a!important;
+  color: #fff!important;
+  border-color: #fff!important;
+  background-color: #91B595!important;
 }
 
 .credit{
@@ -73,17 +77,9 @@
   font-size: 0.8rem;
 }
 
-.content {
-  background-color: #22261e;
-}
-
 .pdp-text {
   z-index: 1020;
   position: sticky;
-}
-
-.fsi-root .fsi-ui-logo {
-  display: none!important;
 }
 
 .flex-equal > * {

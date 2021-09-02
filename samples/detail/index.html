@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Simple FSI Image Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href='detail.css' type="text/css"/>
+  <script src='detail.js'></script>
+  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js'></script>
+  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js'></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<header class="site-header sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#" aria-label="Product">
+      <img src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/logo-misc-gre.svg" height="24">
+    </a>
+    <a class="p-6 d-none d-md-inline-block" href="#">SHOP</a>
+    <a class="p-6 d-none d-md-inline-block" href="#">COLLECTION</a>
+    <a class="p-6 d-none d-md-inline-block" href="#">BLOG</a>
+    <a class="p-6 d-none d-md-inline-block" href="#">CONTACT</a>
+    <a class="p-6 d-none d-md-inline-block" href="#">CART</a>
+  </nav>
+</header>
+
+<main>
+  <div class="bg-light d-md-flex flex-md-equal w-100 overflow-hidden">
+    <div class="row row-cols-1 row-cols-md-2 g-3 px-5 py-3">
+      <div class="col-sm-7 viewer">
+        <fsi-viewer id="fsi-viewer"
+                    src="images/samples/Shoe/View2/sneaker-both-13.jpg"
+                    width="100%"
+                    height="100%"
+                    plugins="resize,fullScreen,autoSpin"
+                    skin="example"
+                    autoSpin_speed="10"
+        >
+        </fsi-viewer>
+      </div>
+      <div class="col-sm-5 sticky-top mx-auto">
+        <div class="p-3 text-left">
+          <h2 class="display-5">Camu</h2>
+          <p> Sneaker, Camouflage Suede</p>
+          <p>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <small>(4664) Ratings</small>
+          </p>
+          <p>
+            Sturdy, classy and minimal.</p>
+          <p>
+            Nice shoe for any occasion. The minimal design fits a lot of outfits.
+          </p>
+          <p>
+            <small>Dispatched in 4 working days</small>
+          </p>
+          <div class="btn-group py-3">
+            <button type="button" class="btn btn-lg btn-outline-secondary">Add to basket</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-md-flex bg-light flex-md-equal w-100 py-3 mx-auto text-center overflow-hidden">
+    <h2 class="display-5">Customers also viewed:</h2>
+  </div>
+
+  <div class="row bg-light row-cols-1 row-cols-sm-2 row-cols-md-6 g-3 px-5 py-3 w-100">
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/shoe-spin/Spin050-2.jpg&width=286" alt="" width="286">
+        <div class="card-body">
+          <div class="col-6 product-heading">Emma</div>
+          <p class="product-text">Leather Sneaker</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+            <small class="text-muted">$69</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/Shoe/M1104_10-07_BORDO-1.tif&height=189&width=283&effects=pad(CC,FFFFFF)" alt="" height="189">
+        <div class="card-body">
+          <div class="col-6 product-heading">Albion</div>
+          <p class="product-text">Running Shoe</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+            <small class="text-muted"><s>$49</s> $39</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/configurator/artem-bondarchuk-XPBYi4K8vFI-unsplash.jpg&height=189&width=283&effects=pad(BC,FFFFFF),flip(horizontal)&rect=0,0.21739,1,0.58424" alt="" height="189">
+        <div class="card-body">
+          <div class="col-6 product-heading">Maral</div>
+          <p class="product-text">Suede Sneaker</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+            <small class="text-muted">$59</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="//fsi-site-origin.neptunelabs.com/fsi/server?type=image&source=images/samples/Shoe/T-321-2_1.tif&height=189&width=283&effects=pad(CC,FFFFFF)" alt="" height="189">
+        <div class="card-body">
+          <div class="col-6 product-heading">Harlow</div>
+          <p class="product-text">Canvas Shoe</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+            <small class="text-muted"><s>$64</s> $54</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="//fsi-site-origin.neptunelabs.com/fsi/server?type=image&source=images/samples/Shoe/V43-048448-2.tif&height=189&width=283&effects=pad(CC,FFFFFF)" alt="" height="189">
+        <div class="card-body">
+          <div class="col-6 product-heading">Hopper</div>
+          <p class="product-text">Leather Sneaker</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+            <small class="text-muted">$39</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/Shoe/SM1297_01-71_GREY-1.tif&height=189&width=283&effects=pad(CC,FFFFFF)" alt="" height="189" >
+        <div class="card-body">
+          <div class="col-6 product-heading">Abbey</div>
+          <p class="product-text">Suede Shoe</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+            <small class="text-muted">$64</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="py-5 footer w-100 overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/logo-misc-gre.svg" height="24">
+        <small class="d-block mb-3">&copy; 2017–2021</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Cool stuff</a></li>
+          <li><a class="link-secondary" href="#">Random feature</a></li>
+          <li><a class="link-secondary" href="#">Team feature</a></li>
+          <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+          <li><a class="link-secondary" href="#">Another one</a></li>
+          <li><a class="link-secondary" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Resource name</a></li>
+          <li><a class="link-secondary" href="#">Resource</a></li>
+          <li><a class="link-secondary" href="#">Another resource</a></li>
+          <li><a class="link-secondary" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Business</a></li>
+          <li><a class="link-secondary" href="#">Education</a></li>
+          <li><a class="link-secondary" href="#">Government</a></li>
+          <li><a class="link-secondary" href="#">Gaming</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Team</a></li>
+          <li><a class="link-secondary" href="#">Locations</a></li>
+          <li><a class="link-secondary" href="#">Privacy</a></li>
+          <li><a class="link-secondary" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="credit">
+    Photos by <a href="https://unsplash.com/@nathanrjliving?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nathan Oakley</a> on <a href="https://unsplash.com/@nathanrjliving?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
+</footer>
+
+</body>
+</html>
