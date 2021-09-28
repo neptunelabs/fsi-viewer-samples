@@ -2,6 +2,10 @@ title: Product Detail Page (Modal)
 image: logo.png
 description: Shows how a simple product detail page with a modal could look with FSI Viewer used.
 priority: 2
+facts:
+  - JS built FSI Viewer
+  - zoom and pan
+  - modal implementation
 jsfiddle:
   mapping:
     html: "index.html"

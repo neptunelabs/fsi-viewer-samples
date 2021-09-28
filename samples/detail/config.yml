@@ -2,6 +2,9 @@ title: Product Detail Page (Simple)
 image: logo.png
 description: Shows how a simple product detail page could look with FSI Viewer used.
 priority: 1
+facts:
+  - JS built FSI Viewer
+  - zoom and pan
 jsfiddle:
   mapping:
     html: "index.html"
