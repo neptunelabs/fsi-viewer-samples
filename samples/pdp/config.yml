@@ -5,7 +5,7 @@ facts:
   - JS built FSI Viewer
   - zoom and pan
   - article implementation with JSON
-priority: 4
+priority: 6
 jsfiddle:
   mapping:
     html: "index.html"
