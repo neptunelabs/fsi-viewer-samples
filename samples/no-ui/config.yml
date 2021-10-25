@@ -8,8 +8,8 @@ facts:
 jsfiddle:
   mapping:
     html: "index.html"
-    css: "detail.css"
-    js: "detail.js"
+    css: "no-ui.css"
+    js: "no-ui.js"
   resources:
     - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
     - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css

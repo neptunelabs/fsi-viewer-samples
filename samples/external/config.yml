@@ -1,6 +1,6 @@
-title: External Buttons
+title: External Slider
 image: logo.png
-description: Shows how a simple product detail page could look with FSI Viewer and external buttons used.
+description: Shows how a simple product detail page could look with FSI Viewer and external slider used.
 priority: 4
 facts:
   - JS built FSI Viewer
@@ -9,11 +9,12 @@ facts:
 jsfiddle:
   mapping:
     html: "index.html"
-    css: "detail.css"
-    js: "detail.js"
+    css: "external.css"
+    js: "external.js"
   resources:
     - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
     - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
     - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
     - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
     - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
+    - https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js

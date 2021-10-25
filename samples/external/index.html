@@ -12,10 +12,11 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
-<body class="bg-light">
+<body class="bg-light" onload="initSlider();switchImageSample();">
 
 <header class="site-header sticky-top py-1">
   <nav class="container d-flex flex-column flex-md-row justify-content-between">
@@ -40,27 +41,20 @@
                     plugins="resize,fullScreen"
                     hideUI="true"
                     backgroundColor="#f8f9fa"
+                    debug="true"
                     style="position:relative;"
-                    onzoomchanged="handleZoomChange"
         >
         </fsi-viewer>
-        <div style="background-color: #eee; padding-top: 15px; box-sizing: border-box; text-align: center;">
-          <input
-            id="js-zoomslider"
-            type="range"
-            value="0"
-            style="width: 97%; margin-top: 10px; margin-bottom: 10px;"
-          />
-        </div>
+        <input type="range" class="form-range" id="js-zoomslider">
       </div>
       <div class="col-sm-2">
-        <div id="img1">
+        <div id="img1" class="pb-1">
           <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&height=200" height="200" alt="">
         </div>
-        <div id="img2">
+        <div id="img2" class="pb-1">
           <img class="thumbnail img-fluid"src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-h7FPeFBi3Mo-unsplash.jpg&height=200" height="200" alt="">
         </div>
-        <div id="img3">
+        <div id="img3" class="pb-1">
           <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-mxSo32sNYmA-unsplash.jpg&height=200" height="200" alt="">
         </div>
       </div>
