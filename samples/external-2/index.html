@@ -5,13 +5,14 @@
   <title>Simple FSI Viewer Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link rel="stylesheet" href='no-ui.css' type="text/css"/>
-  <script src='no-ui.js'></script>
+  <link rel="stylesheet" href='external.css' type="text/css"/>
+  <script src='external.js'></script>
   <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js'></script>
   <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js'></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -29,34 +30,42 @@
     <a class="p-6 d-none d-md-inline-block" href="#">CART</a>
   </nav>
 </header>
-
 <main class="content mx-auto">
   <div class="bg-light d-md-flex flex-md-equal w-100 overflow-hidden">
-      <div class="row px-5 mx-5 py-5">
+    <div class="row px-5 mx-5 py-5">
       <div class="col-sm-4 pl-5 viewer">
         <fsi-viewer id="image"
-                    src="images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg"
+                    src="images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg"
                     width="100%"
                     height="100%"
                     plugins="resize,fullScreen"
                     hideUI="true"
                     backgroundColor="#f8f9fa"
+                    debug="true"
                     style="position:relative;"
+                    externalButtonContainer="myExternalButtons"
+                    onAfterRegisterExternalButton="showHideExternalButton"
         >
         </fsi-viewer>
+        <div class="position-absolute menu" id="myExternalButtons">
+          <div style="font-size:32px" class="fsi-root fsi-viewer-root" id="myExternalMenuBar">
+            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/minus.svg" height="30"></div>
+            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-2 viewer overflow-hidden">
-          <div id="img1" class="pb-1">
-            <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg&height=200" height="200" alt="">
-          </div>
-          <div id="img2" class="py-1">
-            <img class="thumbnail img-fluid"src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-PJRabkuH3_Q-unsplash.jpg&rect=0.05455,0.00679,0.9,0.99185&height=200" height="200" alt="">
-          </div>
-          <div id="img3" class="pt-1">
-            <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&height=200" height="200" alt="">
-          </div>
+      <div class="col-sm-2">
+        <div id="img1" class="pb-1">
+          <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&height=200" height="200" alt="">
+        </div>
+        <div id="img2" class="pb-1">
+          <img class="thumbnail img-fluid"src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-h7FPeFBi3Mo-unsplash.jpg&height=200" height="200" alt="">
+        </div>
+        <div id="img3" class="pb-1">
+          <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-mxSo32sNYmA-unsplash.jpg&height=200" height="200" alt="">
+        </div>
       </div>
-          <div class="col-sm-6 pr-5">
+      <div class="col-sm-6 pr-5">
         <div class="p-3 text-left">
           <h2 class="display-5">Peggy</h2>
           <p>Dress, Corduroy & Cotton</p>
@@ -76,17 +85,17 @@
           <p>
             <small>Dispatched in 4 working days</small>
           </p>
-          <div class="row pb-3">
+          <div class="row pt-3 bb-3">
             <div class="col-4 mx-auto">
               <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
-           <p>Charcoal</p>
+              <p>Charcoal</p>
             </div>
             <div class="col-4" >
               <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032" width="150" alt="">
               <p>Mountain Grey</p>
             </div>
             <div class="col-4" >
-             <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+              <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
               <p>Burgundy</p>
             </div>
           </div>
@@ -98,7 +107,7 @@
     </div>
   </div>
   </div>
-    </div>
+  </div>
   </div>
 
 </main>
@@ -144,7 +153,7 @@
     </div>
     <div class="row">
       <div class="credit">
-    Photos by <a class="link-secondary" href="https://unsplash.com/@nathanrjliving?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nathan Oakley</a> on <a class="link-secondary" href="https://unsplash.com/@nathanrjliving?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        Photos by <a class="link-secondary" href="https://unsplash.com/@nathanrjliving?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nathan Oakley</a> on <a class="link-secondary" href="https://unsplash.com/@nathanrjliving?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </div>
     </div>
   </div>

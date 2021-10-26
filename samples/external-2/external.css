@@ -12,7 +12,7 @@
 }
 
 .viewer {
-  height: 600px;
+  height: 610px;
   position: relative;
 }
 
@@ -21,6 +21,21 @@
   height: 300px;
     width: 100%;
   }
+}
+
+.menu {
+  top: 10px;
+  left: 40px;
+}
+
+.icon {
+  border: none!important;
+}
+.zoom-icon {
+  padding: 3px;
+  background-color: #91B595;
+  border-radius: 3px;
+
 }
 
 .site-header {
