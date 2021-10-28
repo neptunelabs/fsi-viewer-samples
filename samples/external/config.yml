@@ -1,10 +1,10 @@
 title: External Slider
 image: logo.png
-description: Shows how a simple product detail page could look with FSI Viewer and external slider used.
+description: Shows how a zoom with FSI Viewer and external slider used could look.
 priority: 4
 facts:
   - JS built FSI Viewer
-  - external UI
+  - external slider
   - zoom and pan
 jsfiddle:
   mapping:

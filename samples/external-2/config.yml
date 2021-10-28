@@ -1,6 +1,6 @@
-title: External Slider
+title: External Buttons
 image: logo.png
-description: Shows how a simple product detail page could look with FSI Viewer and external minimalist buttons used.
+description: Shows how product zoom could look with FSI Viewer and external minimalist buttons used.
 priority: 5
 facts:
   - JS built FSI Viewer

@@ -1,10 +1,11 @@
 title: No Interface Version
 image: logo.png
-description: Shows how a simple product detail page could look with FSI Viewer in the no interface version used.
+description: Shows how a simple no interface product zoom version.
 priority: 3
 facts:
   - JS built FSI Viewer
   - zoom and pan
+  - minimalist no interface version
 jsfiddle:
   mapping:
     html: "index.html"

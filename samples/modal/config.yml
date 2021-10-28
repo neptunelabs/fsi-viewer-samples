@@ -1,6 +1,6 @@
-title: Product Detail Page (Modal)
+title: Product Zoom (Modal)
 image: logo.png
-description: Shows how a simple product detail page with a modal could look with FSI Viewer used.
+description: Shows how a simple product detail page with an integrated modal could look.
 priority: 2
 facts:
   - JS built FSI Viewer
