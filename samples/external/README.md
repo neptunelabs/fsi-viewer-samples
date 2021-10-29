@@ -1,8 +1,9 @@
-# Frontpage - Using FSI Viewer for Image Zoom
+# Frontpage - Using FSI Viewer for Image Zoom - controlled by external slider
 
-This readme describes how the detail page sample with *FSI Viewer* is achieved.
+This readme describes how the detail page sample with *FSI Viewer* is achieved by adding an minimalist external slider.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
 a simple viewer tag.
+Please note that this sample uses Bootstrap and JQuery.
 
 # Add your images/ assets to FSI Server
 
@@ -50,17 +51,91 @@ Afterwards, you need to place the *<fsi-viewer>* tag you see in the Publish sect
 In our example this will look like this:
 
 ```html
-<fsi-viewer
-  id="fsi-viewer"
-  src="images/samples/Shoe/View2/sneaker-both-13.jpg"
-  width="100%"
-  height="100%"
-  plugins="resize,fullScreen,autoSpin"
-  skin="example"
-  autoSpin_speed="10"
+  <fsi-viewer id="image"
+              src="images/samples/ssi/coffee/max-fuchs-GV1kBQ7MEbg-unsplash.jpg"
+              width="100%"
+              height="100%"
+              plugins="resize,fullScreen"
+              hideUI="true"
+              backgroundColor="#f8f9fa"
+              debug="true"
+              style="position:relative;"
 >
 </fsi-viewer>
 ```
+
+##Adding the external slider
+
+Afterwards, the external slider input is implemented.
+Add JQuery to the head of the document:
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+```
+
+And add the input on the place where you would like to display the slider:
+```html
+<input type="range" class="form-range" id="js-zoomslider">
+```
+
+In the **body** tag, two functions are loaded. switchImageSample controls the thumbnails on the side of the viewer, initSlider controls the
+external slider. For this tutorial we only focus on initSlider.
+```html
+<body class="bg-light" onload="initSlider();switchImageSample();">
+```
+
+In our **external.js**, we add the corresponding function:
+
+```javascript
+function initSlider() {
+  new ZoomSliderControl(
+    document.getElementById('image'),
+    document.getElementById('js-zoomslider')
+  );
+}
+```
+First, we get the viewer and slider element by their ID.
+
+```javascript
+  var ZoomSliderControl = function(elViewer, elSlider){
+  var bChangeFromSlider;
+
+  var init = function(){
+  $FSI.addEvent(elSlider, 'input', handleSlider);
+  elViewer.addListener('onZoomChanging', handleZoomChange);
+}
+
+```
+We add an input event to the slider as well as a listener on the viewer detecting a zoom change.
+
+```javascript
+  var handleZoomChange = function(fScale, fScaleMax, fPercent) {
+  if (bChangeFromSlider) return;
+  elSlider.value = fPercent;
+};
+
+  var handleSlider = function(evt){
+  bChangeFromSlider = true;
+  var fPercent = evt.target.value;
+  elViewer.setZoom(fPercent, false, false);
+  bChangeFromSlider = false;
+};
+
+  init();
+};
+```
+The elViewer.setZoom sets the FSI Viewer zoom level according to the slider input value.
+
+The function scheme is as follows:
+
+```javascript
+setZoom(fZoomPercent, bPreliminary, bAnimate)
+```
+Parameters:
+**nZoom** is a float, range: [0..100]
+
+**bPreliminary** is a boolean, if set to true, image tiles are loaded.
+
+**bAnimate** is a boolean, if set to false, the magnification is set immediately.
 
 For all parameters which can be used, please consult the [manual](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-viewer).
 

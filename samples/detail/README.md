@@ -55,9 +55,8 @@ In our example this will look like this:
   src="images/samples/Shoe/View2/sneaker-both-13.jpg"
   width="100%"
   height="100%"
-  plugins="resize,fullScreen,autoSpin"
+  plugins="resize,fullScreen"
   skin="example"
-  autoSpin_speed="10"
 >
 </fsi-viewer>
 ```

@@ -1,6 +1,6 @@
-# Frontpage - Using FSI Viewer for Image Zoom
+# Frontpage - Using FSI Viewer for Image Zoom - No Interface
 
-This readme describes how the detail page sample with *FSI Viewer* is achieved.
+This readme describes how the detail page sample with *FSI Viewer* is achieved while using no interface.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
 a simple viewer tag.
 
@@ -50,17 +50,19 @@ Afterwards, you need to place the *<fsi-viewer>* tag you see in the Publish sect
 In our example this will look like this:
 
 ```html
-<fsi-viewer
-  id="fsi-viewer"
-  src="images/samples/Shoe/View2/sneaker-both-13.jpg"
-  width="100%"
-  height="100%"
-  plugins="resize,fullScreen,autoSpin"
-  skin="example"
-  autoSpin_speed="10"
+ <fsi-viewer id="image"
+             src="images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg"
+             width="100%"
+             height="100%"
+             plugins="resize,fullScreen"
+             hideUI="true"
+             backgroundColor="#f8f9fa"
+             style="position:relative;"
 >
 </fsi-viewer>
 ```
+## Displaying the viewer without interface
+For ensuring that no interface is shown, you'll need to add **hideUI="true"** to the parameter list as seen above.
 
 For all parameters which can be used, please consult the [manual](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-viewer).
 
