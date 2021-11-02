@@ -1,8 +1,9 @@
-# Frontpage - Using FSI Viewer for Image Zoom
+# Frontpage - Using FSI Viewer for Image Zoom - Modal Version
 
-This readme describes how the detail page sample with *FSI Viewer* is achieved.
+This readme describes how the detail page sample with *FSI Viewer* in a modal is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
 a simple viewer tag.
+Please note that this sample uses Bootstrap.
 
 # Add your images/ assets to FSI Server
 
@@ -41,7 +42,7 @@ to the head of your website:
 
 ```html
 <script
-  src='https://fsi-site.neptunelabs.comfsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi-site.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This ensures that FSI Viewer is loaded.

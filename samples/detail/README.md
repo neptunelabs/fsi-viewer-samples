@@ -41,7 +41,7 @@ to the head of your website:
 
 ```html
 <script
-  src='https://fsi-site.neptunelabs.comfsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi-site.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This ensures that FSI Viewer is loaded.

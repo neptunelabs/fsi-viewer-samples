@@ -1,8 +1,8 @@
-# Frontpage - Using FSI Viewer for Image Zoom
+# Frontpage - Using FSI Viewer for Image Zoom - External Buttons
 
-This readme describes how the detail page sample with *FSI Viewer* is achieved.
+This readme describes how the detail page sample with *FSI Viewer* and minimalist external buttons is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
-a simple viewer tag.
+a simple viewer tag and how to add external buttons to it.
 
 # Add your images/ assets to FSI Server
 
@@ -26,7 +26,7 @@ Depending on the type of the selected source connector, you can upload different
 # Use zoom on the website
 
 While having an image selected, you can see all possible publishing ways for the specific item by visting the Publish To Web tab.
-For this example, select the preset *FSI Viewer - white skin* in the section *Zoom & Pan*:
+For this example, select the preset *FSI Viewer - no UI* in the section *Zoom & Pan*:
 
 ![Config Image](readme-detail-1.png)
 
@@ -41,7 +41,7 @@ to the head of your website:
 
 ```html
 <script
-  src='https://fsi-site.neptunelabs.comfsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi-site.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This ensures that FSI Viewer is loaded.
@@ -50,14 +50,69 @@ Afterwards, you need to place the *<fsi-viewer>* tag you see in the Publish sect
 In our example this will look like this:
 
 ```html
-<fsi-viewer
-  id="fsi-viewer"
-  src="images/samples/Shoe/View2/sneaker-both-13.jpg"
-  width="100%"
-  height="100%"
-  plugins="resize,fullScreen,autoSpin"
-  skin="example"
-  autoSpin_speed="10"
+<fsi-viewer id="image"
+            src="images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg"
+            width="100%"
+            height="100%"
+            plugins="resize,fullScreen"
+            hideUI="true"
+            backgroundColor="#f8f9fa"
+>
+</fsi-viewer>
+```
+
+# Adding external buttons
+
+Then we need to add the button container:
+```html
+        <div class="position-absolute menu" id="myExternalButtons">
+          <div style="font-size:32px" class="fsi-root fsi-viewer-root" id="myExternalMenuBar">
+            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/minus.svg" height="30"></div>
+            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
+          </div>
+        </div>
+```
+
+We pass the ID of this div (**myExternalButtons**) to the FSI Viewer with the following parameter:
+
+**externalButtonContainer="myExternalButtons"**
+
+In order to hide external buttons which are not supposed to be seen in the viewer, we set the following function in our external.js:
+
+```javascript
+function showHideExternalButton(elButton, strButtonID, bPresentInViewer){
+  if (!bPresentInViewer) elButton.style.display = "none";
+  else elButton.style.display = "";
+}
+```
+
+This function is called by setting the parameter **onAfterRegisterExternalButton="showHideExternalButton"**.
+
+It's important to set **hideUI="true"** in order to hide the original skin.
+
+By setting the external button div container to **position-absolute** and the FSI Viewer to **position:relative**, we ensure an overlay effect of the buttons.
+
+The class **menu** serves for setting the position of the buttons (defined in external.css):
+```css
+.menu {
+  top: 10px;
+  left: 40px;
+}
+```
+
+So the <fsi-viewer> tag needs to look like this:
+
+```html
+<fsi-viewer id="image"
+            src="images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg"
+            width="100%"
+            height="100%"
+            plugins="resize,fullScreen"
+            hideUI="true"
+            backgroundColor="#f8f9fa"
+            style="position:relative;"
+            externalButtonContainer="myExternalButtons"
+            onAfterRegisterExternalButton="showHideExternalButton"
 >
 </fsi-viewer>
 ```
