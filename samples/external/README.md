@@ -19,7 +19,7 @@ It's important to use the correct source connector for your images:
 
 Depending on the type of the selected source connector, you can upload different types of files. There are several possibilities to upload images into the interface.
 
-![Config Image](readme-detail.png)
+![Config Image](readme-slider.png)
 
 - Choose the Upload tab, click the "Choose files" button to add files to upload to the list. The files will be uploaded to the current folder.
 - Drag & Drop files to the file view or the tree view
@@ -27,15 +27,15 @@ Depending on the type of the selected source connector, you can upload different
 # Use zoom on the website
 
 While having an image selected, you can see all possible publishing ways for the specific item by visting the Publish To Web tab.
-For this example, select the preset *FSI Viewer - white skin* in the section *Zoom & Pan*:
+For this example, select the preset *FSI Viewer - no UI* in the section *Zoom & Pan*:
 
-![Config Image](readme-detail-1.png)
+![Config Image](readme-slider-1.png)
 
 The *Source Code* section enables you to control the look of your viewer by setting the dimensions and format, as well as adding effects or crop options to it.
 In this area you also can see the source code for your selected publishing option which you can edit and copy to publish the images.
 You also see the required scripts which need to be embedded on the site.
 
-![Config Image](readme-detail-2.png)
+![Config Image](readme-slider-2.png)
 
 In order to display zoom with FSI Viewer, you only need to add the corresponding script
 to the head of your website:
@@ -48,7 +48,7 @@ to the head of your website:
 This ensures that FSI Viewer is loaded.
 
 Afterwards, you need to place the *<fsi-viewer>* tag you see in the Publish section on the place where you would like to see the viewer.
-In our example this will look like this:
+In our example this will look like this (it's important to choose no UI as a setting, ensuring **hideUI="true"** is set):
 
 ```html
   <fsi-viewer id="image"
@@ -58,7 +58,6 @@ In our example this will look like this:
               plugins="resize,fullScreen"
               hideUI="true"
               backgroundColor="#f8f9fa"
-              debug="true"
               style="position:relative;"
 >
 </fsi-viewer>
