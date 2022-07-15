@@ -20,7 +20,7 @@
 <header class="site-header sticky-top py-1">
   <nav class="container d-flex flex-column flex-md-row justify-content-between">
     <a class="py-2" href="#" aria-label="Product">
-      <img src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/logo-misc-gre.svg" height="24">
+      <img src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/ssi/logo-misc-gre.svg" height="24">
     </a>
     <a class="p-6 d-none d-md-inline-block" href="#">SHOP</a>
     <a class="p-6 d-none d-md-inline-block" href="#">COLLECTION</a>
@@ -32,7 +32,7 @@
 
 <main class="content mx-auto">
   <div class="bg-light d-md-flex flex-md-equal w-100 overflow-hidden">
-      <div class="row px-5 mx-5 py-5">
+    <div class="row px-5 mx-5 py-5">
       <div class="col-sm-4 pl-5 viewer">
         <fsi-viewer id="image"
                     src="images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg"
@@ -46,17 +46,17 @@
         </fsi-viewer>
       </div>
       <div class="col-sm-2 viewer overflow-hidden">
-          <div id="img1" class="pb-1">
-            <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg&height=200" height="200" alt="">
-          </div>
-          <div id="img2" class="py-1">
-            <img class="thumbnail img-fluid"src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-PJRabkuH3_Q-unsplash.jpg&rect=0.05455,0.00679,0.9,0.99185&height=200" height="200" alt="">
-          </div>
-          <div id="img3" class="pt-1">
-            <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&height=200" height="200" alt="">
-          </div>
+        <div id="img1" class="pb-1">
+          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg&height=200" height="200" alt="">
+        </div>
+        <div id="img2" class="py-1">
+          <img class="thumbnail img-fluid"src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-PJRabkuH3_Q-unsplash.jpg&rect=0.05455,0.00679,0.9,0.99185&height=200" height="200" alt="">
+        </div>
+        <div id="img3" class="pt-1">
+          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&height=200" height="200" alt="">
+        </div>
       </div>
-          <div class="col-sm-6 pr-5">
+      <div class="col-sm-6 pr-5">
         <div class="p-3 text-left">
           <h2 class="display-5">Peggy</h2>
           <p>Dress, Corduroy & Cotton</p>
@@ -78,15 +78,15 @@
           </p>
           <div class="row pb-3">
             <div class="col-4 mx-auto">
-              <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
-           <p>Charcoal</p>
+              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+              <p>Charcoal</p>
             </div>
             <div class="col-4" >
-              <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032" width="150" alt="">
+              <img class="thumbnail img-fluid" onclick="changeImage('2')" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032" width="150" alt="">
               <p>Mountain Grey</p>
             </div>
             <div class="col-4" >
-             <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+              <img class="thumbnail img-fluid" onclick="changeImage('1')" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
               <p>Burgundy</p>
             </div>
           </div>
@@ -98,7 +98,7 @@
     </div>
   </div>
   </div>
-    </div>
+  </div>
   </div>
 
 </main>
@@ -144,7 +144,7 @@
     </div>
     <div class="row">
       <div class="credit">
-    Photos by <a class="link-secondary" href="https://unsplash.com/@skumen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kate Skumen</a> on <a class="link-secondary"href="https://unsplash.com/collections/2010716/women?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        Photos by <a class="link-secondary" href="https://unsplash.com/@skumen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kate Skumen</a> on <a class="link-secondary"href="https://unsplash.com/collections/2010716/women?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </div>
     </div>
   </div>
