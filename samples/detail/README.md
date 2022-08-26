@@ -23,9 +23,9 @@ Depending on the type of the selected source connector, you can upload different
 - Choose the Upload tab, click the "Choose files" button to add files to upload to the list. The files will be uploaded to the current folder.
 - Drag & Drop files to the file view or the tree view
 
-# Use zoom on the website
+# Use Zoom on the website
 
-While having an image selected, you can see all possible publishing ways for the specific item by visting the Publish To Web tab.
+While having an image selected, you can see all possible publishing ways for the specific item by visiting the "Publish To Web" tab.
 For this example, select the preset *FSI Viewer - white skin* in the section *Zoom & Pan*:
 
 ![Config Image](readme-detail-1.png)
