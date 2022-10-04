@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom - Modal Version
+# Using FSI Viewer for Image Zoom - Modal Version
 
 This readme describes how the detail page sample with *FSI Viewer* in a modal is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding

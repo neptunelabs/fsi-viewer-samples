@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom - External Buttons
+# Using FSI Viewer for Image Zoom - External Buttons
 
 This readme describes how the detail page sample with *FSI Viewer* and minimalist external buttons is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding

@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom
+# Using FSI Viewer for Image Zoom
 
 This readme describes how the detail page sample with *FSI Viewer* is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding

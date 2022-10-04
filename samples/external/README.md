@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom - controlled by external slider
+# Using FSI Viewer for Image Zoom - controlled by external slider
 
 This readme describes how the detail page sample with *FSI Viewer* is achieved by adding a minimalist external slider.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding

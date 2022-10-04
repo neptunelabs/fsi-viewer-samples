@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom - Custom Skin
+# Using FSI Viewer for Image Zoom - Custom Skin
 
 This readme describes how the detail page sample with *FSI Viewer* and a custom skin is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
