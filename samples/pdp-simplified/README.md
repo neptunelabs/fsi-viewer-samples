@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom - Custom Skin
+# Using FSI Viewer for Image Zoom - Custom Skin
 
 This readme describes how the detail page sample with *FSI Viewer* and a custom skin is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
@@ -34,9 +34,9 @@ We have various tutorials on our website where you learn how to:
 For our example, we created custom buttons and followed the steps in the **Advanced Custom Skins** example.
 The skin CSS needs to be stored in your FSI Server at the following path: **/_viewers/skins/**
 
-# Use zoom on the website
+# Use Zoom on the website
 
-While having an image selected, you can see all possible publishing ways for the specific item by visting the Publish To Web tab.
+While having an image selected, you can see all possible publishing ways for the specific item by visiting the "Publish To Web" tab.
 For this example, select the preset *FSI Viewer - white skin* in the section *Zoom & Pan*:
 
 ![Config Image](readme-custom-1.png)

@@ -14,6 +14,10 @@ function onThumbnailClick(){
     // get the src attribute
     var strImageURL = img[0].getAttribute("src") ;
 
+    if (img[1]){
+
+    }
+
     // get the "source" parameter value
     var src = $FSI.utils.getParameterValueFromURL(strImageURL, 'source');
 

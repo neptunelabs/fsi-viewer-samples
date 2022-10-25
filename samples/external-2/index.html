@@ -20,7 +20,7 @@
 <header class="site-header sticky-top py-1">
   <nav class="container d-flex flex-column flex-md-row justify-content-between">
     <a class="py-2" href="#" aria-label="Product">
-      <img src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/logo-misc-gre.svg" height="24">
+      <img src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/ssi/logo-misc-gre.svg" height="24" alt="">
     </a>
     <a class="p-6 d-none d-md-inline-block" href="#">SHOP</a>
     <a class="p-6 d-none d-md-inline-block" href="#">COLLECTION</a>
@@ -48,20 +48,20 @@
         </fsi-viewer>
         <div class="position-absolute menu" id="myExternalButtons">
           <div style="font-size:32px" class="fsi-root fsi-viewer-root" id="myExternalMenuBar">
-            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/minus.svg" height="30"></div>
-            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
+            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" alt="" src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/ssi/minus.svg" height="30"></div>
+            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" alt="" src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/ssi/plus.svg" height="30"></div>
           </div>
         </div>
       </div>
       <div class="col-sm-2">
         <div id="img1" class="pb-1">
-          <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&height=200" height="200" alt="">
+          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&height=200" height="200" alt="">
         </div>
         <div id="img2" class="pb-1">
-          <img class="thumbnail img-fluid"src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-h7FPeFBi3Mo-unsplash.jpg&height=200" height="200" alt="">
+          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-h7FPeFBi3Mo-unsplash.jpg&height=200" height="200" alt="">
         </div>
         <div id="img3" class="pb-1">
-          <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-mxSo32sNYmA-unsplash.jpg&height=200" height="200" alt="">
+          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-mxSo32sNYmA-unsplash.jpg&height=200" height="200" alt="">
         </div>
       </div>
       <div class="col-sm-6 pr-5">
@@ -86,15 +86,15 @@
           </p>
           <div class="row pt-3 bb-3">
             <div class="col-4 mx-auto">
-              <img class="thumbnail img-fluid" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
               <p>Charcoal</p>
             </div>
             <div class="col-4" >
-              <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032" width="150" alt="">
+              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032" width="150" alt="">
               <p>Mountain Grey</p>
             </div>
             <div class="col-4" >
-              <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi-site.neptunelabs.com/fsi/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
               <p>Burgundy</p>
             </div>
           </div>
@@ -116,7 +116,6 @@
     <div class="row ">
       <div class="col-lg-3 mb-3">
         <h4>Example Company</h4>
-        <small class="d-block mb-3">&copy; 2017–2021</small>
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Designed based on the <a class="link-secondary" href="https://getbootstrap.com/docs/5.0/examples/">Bootstrap examples</a>. Implemented to show various samples on how to use <a class="link-secondary" href="https://www.neptunelabs.com/fsi-server/">FSI Server</a>.</li>
         </ul>

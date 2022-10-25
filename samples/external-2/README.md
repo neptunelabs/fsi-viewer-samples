@@ -1,4 +1,4 @@
-# Frontpage - Using FSI Viewer for Image Zoom - External Buttons
+# Using FSI Viewer for Image Zoom - External Buttons
 
 This readme describes how the detail page sample with *FSI Viewer* and minimalist external buttons is achieved.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
@@ -23,9 +23,9 @@ Depending on the type of the selected source connector, you can upload different
 - Choose the Upload tab, click the "Choose files" button to add files to upload to the list. The files will be uploaded to the current folder.
 - Drag & Drop files to the file view or the tree view
 
-# Use zoom on the website
+# Use Zoom on the website
 
-While having an image selected, you can see all possible publishing ways for the specific item by visting the Publish To Web tab.
+While having an image selected, you can see all possible publishing ways for the specific item by visiting the "Publish To Web" tab.
 For this example, select the preset *FSI Viewer - no UI* in the section *Zoom & Pan*:
 
 ![Config Image](readme-buttons-1.png)
@@ -67,8 +67,8 @@ Then we need to add the button container:
 ```html
         <div class="position-absolute menu" id="myExternalButtons">
           <div style="font-size:32px" class="fsi-root fsi-viewer-root" id="myExternalMenuBar">
-            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/minus.svg" height="30"></div>
-            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
+            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/minus.svg" height="30" alt=""></div>
+            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" alt="" src="//fsi-site.neptunelabs.com/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
           </div>
         </div>
 ```
