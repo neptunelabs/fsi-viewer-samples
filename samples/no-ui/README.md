@@ -4,26 +4,7 @@ This readme describes how the detail page sample with *FSI Viewer* is achieved w
 The aim of the demo is to show how you can easily integrate images with zoom by just adding
 a simple viewer tag.
 
-# Add your images/ assets to FSI Server
-
-First, you'll need to upload the images you want to use to FSI Server.
-You can install a [demo version](https://www.neptunelabs.com/get/) via Docker or use our [online demo server](https://demo.fsi-server.com/fsi/interface/) to try it out first.
-
-It's important to use the correct source connector for your images:
-
-- *Storage*: images will be imported to the storage for high performance Single Source Imaging
-- *Static*: for static files only, e.g. style graphics you want to use on your website
-
-# Uploading images
-
-Depending on the type of the selected source connector, you can upload different types of files. There are several possibilities to upload images into the interface.
-
-![Config Image](readme-no-ui.png)
-
-- Choose the Upload tab, click the "Choose files" button to add files to upload to the list. The files will be uploaded to the current folder.
-- Drag & Drop files to the file view or the tree view
-
-# Use zoom on the website
+# Add zoom to the website
 
 While having an image selected, you can see all possible publishing ways for the specific item by visting the Publish To Web tab.
 For this example, select the preset *FSI Viewer - no UI* in the section *Zoom & Pan*:
