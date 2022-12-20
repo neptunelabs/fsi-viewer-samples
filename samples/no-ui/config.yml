@@ -1,19 +1,27 @@
-title: No Interface Version
-image: logo.png
-description: Shows how a simple no interface product zoom version.
-priority: 3
-facts:
-  - JS built FSI Viewer
-  - zoom and pan
-  - minimalist no interface version
-jsfiddle:
+overview:
+  title: No Interface Version
+  image: logo.png
+  description: Shows how a simple no interface product zoom version.
+  order: 3
+  facts:
+    - JS built FSI Viewer
+    - zoom and pan
+    - minimalist no interface version
+sample:
+  template:
+    schema: framework-furniture
+    components:
+      menu: true
+      hero: false
+      featured: true
+      footer: true
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: false
   mapping:
     html: "index.html"
     css: "no-ui.css"
     js: "no-ui.js"
-  resources:
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
-    - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
+jsfiddle:
+  deploy: true

@@ -30,7 +30,6 @@ function onThumbnailClick(){
 }
 addEventListener('DOMContentLoaded', (event) => {
   switchImageSample();
-  showHideExternalButton();
 });
 
 

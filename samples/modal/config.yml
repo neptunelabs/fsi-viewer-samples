@@ -1,19 +1,29 @@
-title: Product Zoom (Modal)
-image: logo.png
-description: Shows how a simple product detail page with an integrated modal could look.
-priority: 2
-facts:
-  - JS built FSI Viewer
-  - zoom and pan
-  - modal implementation
-jsfiddle:
+overview:
+  title: Product Zoom (Modal)
+  image: logo.png
+  description: Shows how a simple product detail page with an integrated modal could look.
+  order: 2
+  facts:
+    - JS built FSI Viewer
+    - zoom and pan
+    - modal implementation
+sample:
+  template:
+    schema: framework-furniture
+    components:
+      menu: true
+      highlight: HIGHLIGHT OF THE DAY
+      featured: true
+      categories: true
+      footer: true
+      hero: false
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: true
   mapping:
     html: "index.html"
     css: "modal.css"
     js: "modal.js"
-  resources:
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
-    - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
+jsfiddle:
+  deploy: true
