@@ -9,16 +9,16 @@ overview:
   order: 6
 sample:
   template:
-    schema: framework-furniture
+    schema: framework-2023
     components:
-      menu: true
-      hero: false
-      featured: true
-      footer: true
-      fsi:
-        viewer: true
-      bootstrap:
-        icons: false
+        menu:
+          template: data/clothing-menu.yml
+        highlight: DEAL OF THE DAY
+        footer: true
+        fsi:
+          viewer: true
+        bootstrap:
+          icons: false
   mapping:
     html: "index.html"
     js: "pdp.js"

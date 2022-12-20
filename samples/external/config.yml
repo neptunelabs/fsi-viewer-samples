@@ -9,10 +9,11 @@ overview:
     - zoom and pan
 sample:
   template:
-    schema: framework-furniture
+    schema: framework-2023
     components:
-      menu: true
-      hero: false
+      menu:
+        template: data/misc-menu.yml
+      highlight: DEAL OF THE DAY
       featured: true
       footer: true
       fsi:

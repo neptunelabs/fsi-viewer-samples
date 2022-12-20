@@ -9,11 +9,11 @@ overview:
     - minimalist no interface version
 sample:
   template:
-    schema: framework-furniture
+    schema: framework-2023
     components:
-      menu: true
-      hero: false
-      featured: true
+      menu:
+        template: data/clothing-menu.yml
+      highlight: DEAL OF THE DAY
       footer: true
       fsi:
         viewer: true
