@@ -63,7 +63,7 @@ external slider. For this tutorial we only focus on initSlider.
 <body class="bg-light" onload="initSlider();switchImageSample();">
 ```
 
-In our **external.js**, we add the corresponding function:
+In our **external-buttons.js**, we add the corresponding function:
 
 ```javascript
 function initSlider() {
