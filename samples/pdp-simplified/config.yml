@@ -13,7 +13,6 @@ sample:
     components:
       menu:
         template: data/misc-menu.yml
-      highlight: DEAL OF THE DAY
       hero: false
       featured: true
       footer: true

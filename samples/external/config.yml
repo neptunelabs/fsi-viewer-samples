@@ -20,6 +20,7 @@ sample:
         viewer: true
       bootstrap:
         icons: false
+      jQuery: true
   mapping:
     html: "external.html"
     css: "external.css"
