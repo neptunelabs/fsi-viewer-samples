@@ -1,20 +1,3 @@
-.thumbnail
-{
-  cursor: pointer;
-}
-
-.viewer {
-  height: 600px;
-  position: relative;
-}
-
-@media screen and (max-width:840px) {
-  .viewer {
-  height: 300px;
-    width: 100%;
-  }
-}
-
 .flex-equal > * {
   flex: 1;
 }

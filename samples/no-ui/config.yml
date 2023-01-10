@@ -14,7 +14,14 @@ sample:
       menu:
         template: data/clothing-menu.yml
       highlight: DEAL OF THE DAY
-      footer: true
+      footer:
+        credits:
+          photos:
+            - author: Kate Skumen
+              link: https://unsplash.com/@skumen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
       fsi:
         viewer: true
       bootstrap:

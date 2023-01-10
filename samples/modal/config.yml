@@ -17,7 +17,14 @@ sample:
       featured:
         template: data/furniture-featured.yml
       categories: true
-      footer: true
+      footer:
+        credits:
+          photos:
+            author: various artists
+            link: https://pixabay.com/
+            platform: Pixabay
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
       hero: false
       fsi:
         viewer: true
