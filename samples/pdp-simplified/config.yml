@@ -15,7 +15,14 @@ sample:
         template: data/misc-menu.yml
       hero: false
       featured: true
-      footer: true
+      footer:
+        credits:
+          photos:
+            - author: Brandon Atchison
+              link: https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
       fsi:
         viewer: true
       bootstrap:
