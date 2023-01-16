@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="bg-light d-md-flex flex-md-equal w-100 overflow-hidden">
-    <div class="row px-5 mx-5 py-5">
-      <div class="col-sm-5 pl-5 viewer">
+  <div class="overflow-hidden">
+    <div class="row row-cols-1 row-cols-lg-3 g-3 px-5 py-3">
+      <div class="col">
         <fsi-viewer id="image"
+                    class="viewer"
                     src="images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg"
                     width="100%"
                     height="100%"
@@ -13,18 +14,20 @@
         >
         </fsi-viewer>
       </div>
-      <div class="col-sm-2 viewer overflow-hidden">
-        <div id="img1" class="pb-1">
+      <div class="col overflow-hidden text-center">
+        <div class="row row-cols-3 row-cols-lg-1">
+        <div id="img1" class="col pb-1">
           <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg&height=200" height="200" alt="">
         </div>
-        <div id="img2" class="py-1">
+        <div id="img2" class="col py-1">
           <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-PJRabkuH3_Q-unsplash.jpg&rect=0.05455,0.00679,0.9,0.99185&height=200" height="200" alt="">
         </div>
-        <div id="img3" class="pt-1">
+        <div id="img3" class="col pt-1">
           <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&height=200" height="200" alt="">
         </div>
+        </div>
       </div>
-      <div class="col-sm-5 pr-5">
+      <div class="col pr-5">
         <div class="p-3 text-left">
           <h2 class="display-5">Peggy</h2>
           <p>Dress, Corduroy & Cotton</p>

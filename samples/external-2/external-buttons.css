@@ -1,6 +1,6 @@
 .menu {
-  top: 10px;
-  left: 40px;
+  top: 10%;
+  left: 20%;
 }
 
 .icon {
@@ -10,5 +10,18 @@
   padding: 3px;
   background-color: #91B595;
   border-radius: 3px;
-
 }
+
+@media (max-width: 992px) {
+  .viewer {
+    height: 400px!important;
+  }
+}
+
+@media (max-height: 400px) {
+  .viewer {
+    height: 200px!important;
+  }
+}
+
+

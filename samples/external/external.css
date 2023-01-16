@@ -1,0 +1,12 @@
+@media (max-width: 992px) {
+  .viewer {
+    height: 400px!important;
+  }
+}
+
+@media (max-height: 400px) {
+  .viewer {
+    height: 200px!important;
+  }
+}
+

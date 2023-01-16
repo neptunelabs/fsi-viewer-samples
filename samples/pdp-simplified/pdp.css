@@ -2,26 +2,14 @@
   background-color: #22261e!important;
 }
 
-.fsi-root .fsi-ui-logo {
-  display: none!important;
-}
-
-.flex-equal > * {
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
+@media (max-width: 992px) {
+  .viewer {
+    height: 400px!important;
   }
 }
 
-.viewer {
-  height: 500px;
-}
-
-@media screen and (max-width:640px) {
+@media (max-height: 400px) {
   .viewer {
-    height: 300px;
-    width: 100%;
+    height: 200px!important;
   }
 }
