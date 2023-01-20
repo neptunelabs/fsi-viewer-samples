@@ -26,7 +26,6 @@ sample:
             link: https://www.neptunelabs.com/fsi-viewer/
       fsi:
         viewer: true
-        touchZoom: true
       bootstrap:
         icons: true
   mapping:
