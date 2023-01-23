@@ -1,14 +1,14 @@
 let elSlider, elViewer
 let bChangeFromSlider
 
-const switchImageSample = ()  => {
+const switchImageSample = () => {
   for (let i = 1; i < 4; i++) {
     const el = document.getElementById('img' + i)
     $FSI.addEvent(el, 'click', onThumbnailClick)
   }
 }
 
-const onThumbnailClick = (evt)  => {
+const onThumbnailClick = (evt) => {
   const img = evt.target
 
   if (img) {
@@ -28,6 +28,13 @@ const handleZoomChange = (fScale, fScaleMax, fPercent) => {
   elSlider.value = fPercent
 }
 
+const handleSlider = (evt) => {
+  bChangeFromSlider = true
+  const fPercent = evt.target.value
+  elViewer.setZoom(fPercent, false, false)
+  bChangeFromSlider = false
+}
+
 addEventListener('DOMContentLoaded', (event) => {
 
   elViewer = document.getElementById('image')
@@ -35,5 +42,7 @@ addEventListener('DOMContentLoaded', (event) => {
 
   elSlider = document.getElementById('js-zoomslider')
 
-  switchImageSample();
-});
+  $FSI.addEvent(elSlider, 'input', handleSlider)
+
+  switchImageSample()
+})
