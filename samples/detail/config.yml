@@ -30,6 +30,5 @@ sample:
   mapping:
       html: "detail.html"
       css: "detail.css"
-      js: "detail.js"
 jsfiddle:
   deploy: true
