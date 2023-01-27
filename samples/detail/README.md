@@ -1,34 +1,32 @@
 # Using FSI Viewer for Image Zoom
 
-This readme describes how the detail page sample with *FSI Viewer* is achieved.
-The aim of the demo is to show how you can easily integrate images with zoom by just adding
-a simple viewer tag.
+This readme describes how the detail page example is achieved using *FSI Viewer*.
+The aim of the demo is to show how you can easily integrate images with zoom by just adding a simple viewer tag.
 
 # Use Zoom on the website
-
-While having an image selected, you can see all possible publishing ways for the specific item by visiting the "Publish To Web" tab.
-For this example, select the preset *FSI Viewer - white skin* in the section *Zoom & Pan*:
+With an image selected, you can see all the possible publishing options for that particular item by going to the Publish To Web tab.
+For this example, select the *FSI Viewer - White Skin* preset in the *Zoom & Pan* section:
 
 ![Config Image](readme-detail-1.png)
 
-The *Source Code* section enables you to control the look of your viewer by setting the dimensions and format, as well as adding effects or crop options to it.
-In this area you also can see the source code for your selected publishing option which you can edit and copy to publish the images.
-You also see the required scripts which need to be embedded on the site.
+The Source Code section allows you to control the appearance of your viewer by setting the dimensions and format, as well as adding effects or cropping options.
+This section also displays the source code for your chosen publishing option, which you can edit and copy to publish the images.
+You will also see the necessary scripts that need to be embedded in the page.
 
 ![Config Image](readme-detail-2.png)
 
-In order to display zoom with FSI Viewer, you only need to add the corresponding script
-to the head of your website:
+To display zoom with FSI Viewer, all you need to do is add the script
+at the top of your website:
 
 ```html
 <script
   src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
-This ensures that FSI Viewer is loaded.
+This will ensure that the FSI Viewer is loaded.
 
-Afterwards, you need to place the *<fsi-viewer>* tag you see in the Publish section on the place where you would like to see the viewer.
-In our example this will look like this:
+Next, you need to place the *<fsi-viewer>* tag you see in the Publish section where you want the viewer to appear.
+In our example this looks like this:
 
 ```html
 <fsi-viewer
@@ -42,7 +40,7 @@ In our example this will look like this:
 </fsi-viewer>
 ```
 
-For all parameters which can be used, please consult the [manual](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-viewer).
+For all the parameters that can be used, please refer to the [manual](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-viewer).
 
 ## Testing with examples from your own server
 
