@@ -88,10 +88,7 @@ initProduct() {
   this.handleLayerSelector(this.productData.initLayer, true)
 }
 
-/*
- Build Bootstrap Accordion for Layer controls
- Iterate JSON product data to add FSI Layers and control elements to HTML
- */
+
 buildLayerAccordion() {
   const selAccordionEl = document.createElement('div')
   selAccordionEl.classList.add('accordion')
@@ -266,67 +263,10 @@ getLayerName(groupName, groupKey) {
 
 handleLayerSelector(id, visible) {
   const selectorName = this.getSelectorName(id)
-
-  if (visible) {
-    // get first layer in group
-    if (!this.getSelection(id)) {
-      let firstName
-      for (const [key] of Object.entries(this.productData.products[id])) {
-        if (key !== '_') {
-          firstName = key
-          break
-        }
-      }
-
-      this.showLayer(id, firstName)
-    } else {
-      this.showLayer(id, this.getSelection(id))
-    }
-
-    this.setSelection(id, null, true)
-  }
-  // hide Layer-Selector
-  else {
-    this.setSelection(id, null, false)
-  }
-
-  // hide/show fsi-layer group
-
   this.calcPrice()
 }
 
-showLayer(groupName, name) {
-  // hide/show fsi-layer within a group
 
-  this.setSelection(groupName, name, true)
-
-  // write text to checkbox label
-  const layerText = this.productData.products[groupName][name].comment
-  this.fill(this.getCheckName(groupName), layerText)
-
-  const radioId = this.getSelectorRadioName(groupName, name)
-  document.getElementById(radioId).click()
-
-  this.calcPrice()
-}
-
-setSelection(groupName, name, show) {
-  this.selection['_'] = groupName
-  if (!this.selection[groupName]) this.selection[groupName] = {}
-  this.selection[groupName].visible = show
-  if (name) {
-    this.selection[groupName].name = name
-  }
-}
-
-getSelection(groupName) {
-  if (this.selection[groupName]) return this.selection[groupName].name
-  return null
-}
-
-/*
- Calc end price
- */
 calcPrice() {
   let price = this.productData.price
   Object.entries(this.selection).forEach(([key, value]) => {
