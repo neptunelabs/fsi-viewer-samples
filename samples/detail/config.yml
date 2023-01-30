@@ -15,6 +15,7 @@ sample:
         template: data/clothing-menu.yml
       featured:
         template: data/clothing-featured.yml
+      highlight: DEAL OF THE DAY
       footer:
         credits:
           photos:
@@ -30,6 +31,5 @@ sample:
   mapping:
       html: "detail.html"
       css: "detail.css"
-      js: "detail.js"
 jsfiddle:
   deploy: true
