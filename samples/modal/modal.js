@@ -18,14 +18,3 @@ const changeImage = (buttonID) => {
   curImage.src = img;
   document.getElementsByTagName("fsi-viewer")[0].changeConfig(undefined, {imagesrc: src});
 }
-
-addEventListener('DOMContentLoaded', (event) => {
-  document.getElementById('exampleModal').addEventListener('shown.bs.modal', (event) => {
-    const evt = new Event("resize");
-    evt.FSI_after_treshold = true;
-    document.getElementsByTagName("fsi-viewer")[0].onResize(evt)
-    console.log('Call FSI Resize')
-  });
-});
-
-
