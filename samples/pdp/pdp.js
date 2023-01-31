@@ -85,80 +85,17 @@ initProduct() {
 
   this.buildLayerAccordion()
 
+  this.buildProductVariants()
+
   this.handleLayerSelector(this.productData.initLayer, true)
 }
-
-
-buildLayerAccordion() {
+buildProductVariants() {
   const selAccordionEl = document.createElement('div')
-  selAccordionEl.classList.add('accordion')
-  selAccordionEl.setAttribute('id', 'layerAccordion')
-  let isFirstElement = true
-  Object.keys(this.productData.products).forEach((groupName) => {
-    this.startViewer(this.fsiViewerEl, groupName, this.productData.products[groupName])
-
-    const selAccordionItemEl = document.createElement('div')
-    selAccordionItemEl.classList.add('accordion-item')
-    const selAccordionHeaderEl = document.createElement('h2')
-    selAccordionHeaderEl.classList.add('accordion-header')
-    selAccordionHeaderEl.id = 'heading_' + groupName
-    const selAccordionButtonEl = document.createElement('button')
-    selAccordionButtonEl.classList.add('accordion-button', 'h5', 'py-2')
-    if (!isFirstElement) {
-      selAccordionButtonEl.classList.add('collapsed')
-    } else {
-      selAccordionButtonEl.classList.add('accordion-button-fixed')
-    }
-    selAccordionButtonEl.setAttribute('type', 'button')
-    selAccordionButtonEl.setAttribute('data-bs-toggle', 'collapse')
-    if (!isFirstElement) selAccordionButtonEl.setAttribute('data-bs-target', '#collapse_' + groupName)
-    selAccordionButtonEl.setAttribute('aria-expanded', isFirstElement)
-    if (!isFirstElement) selAccordionButtonEl.setAttribute('aria-controls', 'collapse_' + groupName)
-    const headerText = document.createTextNode(this.productData.products[groupName]['_'].name)
-    selAccordionButtonEl.appendChild(headerText)
-    selAccordionButtonEl.addEventListener('click', (evt) => {
-      this.handleLayerSelector(groupName, !evt.target.classList.contains('collapsed'))
-    })
-
-    selAccordionHeaderEl.appendChild(selAccordionButtonEl)
-    selAccordionItemEl.appendChild(selAccordionHeaderEl)
-
-    const selAccordionCollapseEl = document.createElement('div')
-    selAccordionCollapseEl.classList.add('accordion-collapse', 'collapse')
-    if (isFirstElement) {
-      selAccordionCollapseEl.classList.add('show')
-    }
-    selAccordionCollapseEl.setAttribute('id', 'collapse_' + groupName)
-    selAccordionCollapseEl.setAttribute('aria-labelledby', 'heading_' + groupName)
-
-    const selAccordionBodyEl = document.createElement('div')
-    selAccordionBodyEl.classList.add('accordion-body')
-
-    const formSelectorTextEl = document.createElement('div')
-    formSelectorTextEl.setAttribute('id', this.getCheckName(groupName))
-    const selectorTextEl = document.createTextNode(this.productData.products[groupName]['_'].name)
-    formSelectorTextEl.appendChild(selectorTextEl)
-
-    selAccordionBodyEl.appendChild(formSelectorTextEl)
-
-    const formSelector = this.buildLayerSelector(groupName, this.productData.products[groupName])
-    selAccordionBodyEl.appendChild(formSelector)
-
-    selAccordionCollapseEl.appendChild(selAccordionBodyEl)
-
-    selAccordionItemEl.appendChild(selAccordionCollapseEl)
-    selAccordionEl.appendChild(selAccordionItemEl)
-
-    isFirstElement = false
-  })
-
-  const layerSwitchesEl = document.getElementById('layerSwitches')
-  layerSwitchesEl.appendChild(selAccordionEl)
+  const productVariantsEl = document.getElementById('productVariants')
+  productVariantsEl.appendChild(selAccordionEl)
 }
 
-/*
-Build FSI Layer Groups and Layer nodes
-*/
+
 startViewer(layerElement, groupName, groupData) {
   let imagesrc;
   Object.keys(groupData).forEach((groupKey) => {
@@ -173,52 +110,6 @@ startViewer(layerElement, groupName, groupData) {
   })
 }
 
-buildLayerSelector(groupName, groupData) {
-  const selectorEl = document.createElement('div')
-  selectorEl.id = this.getSelectorName(groupName)
-  selectorEl.classList.add('layerSelector')
-
-  Object.keys(groupData).forEach((groupKey) => {
-    if (groupKey !== '_') {
-      const data = groupData[groupKey]
-
-      const inputEl = document.createElement('input')
-      inputEl.classList.add('btn-check')
-      inputEl.id = this.getSelectorRadioName(groupName, groupKey)
-      inputEl.setAttribute('name', inputEl.id)
-      inputEl.setAttribute('layerName', groupKey)
-      inputEl.setAttribute('type', 'radio')
-      inputEl.setAttribute('autocomplete', 'off')
-      inputEl.setAttribute('name', 'sel_' + groupName)
-      inputEl.addEventListener('click', (event) => {
-        this.showLayer(groupName, event.target.getAttribute('layerName'))
-      })
-
-      selectorEl.appendChild(inputEl)
-
-      const labelEl = document.createElement('label')
-      labelEl.classList.add('btn', 'btn-pdp-layer', 'm-1')
-      labelEl.setAttribute('for', inputEl.id)
-
-      const tooltip = new bootstrap.Tooltip(labelEl, {
-        title: data.comment,
-      })
-
-      const labelImgEl = document.createElement('img')
-      labelImgEl.setAttribute('height', '80')
-      labelImgEl.src = this.fsiServer + '/server?type=image&source=' + this.srcRoot + '/' + data.img + '&height=160'
-
-      labelEl.appendChild(labelImgEl)
-      selectorEl.appendChild(labelEl)
-    }
-  })
-
-  return selectorEl
-}
-
-/*
- Insert data into elements
- */
 fill(id, content, isHTML) {
   const el = document.getElementById(id)
   if (el) {
@@ -249,40 +140,6 @@ getCheckName(groupName) {
   return 'check_' + groupName
 }
 
-getSelectorName(groupName) {
-  return 'selector_' + groupName
-}
-
-getSelectorRadioName(groupName, name) {
-  return this.getSelectorName(groupName) + '_' + name
-}
-
-getLayerName(groupName, groupKey) {
-  return groupName + '_' + groupKey
-}
-
-handleLayerSelector(id, visible) {
-  const selectorName = this.getSelectorName(id)
-  this.calcPrice()
-}
-
-
-calcPrice() {
-  let price = this.productData.price
-  Object.entries(this.selection).forEach(([key, value]) => {
-    if (value.visible) {
-      price += this.productData.products[key][value.name].price
-    }
-  })
-
-  const priceTotalEl = document.getElementById('priceTotal')
-
-  priceTotalEl.textContent = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(price)
-}
-
-/*
- Change Progress Meter
- */
 setProgress(value) {
   let stockCounterEl = document.getElementById('stockCounter')
   let stockParentEl = document.getElementById('stockParent')
