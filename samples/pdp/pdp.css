@@ -34,3 +34,21 @@
 .btn-pdp-layer:hover {
   background-color: #007185;
 }
+
+#main-img{
+  width:40%;
+  float:left;
+}
+#thumbs{
+  width:60%;
+  float:right;
+  display:flex;
+  flex-wrap:wrap;
+}
+#thumbs div{
+  width:33.33%;
+  padding:5px;
+}
+#price{
+  clear:both;
+}

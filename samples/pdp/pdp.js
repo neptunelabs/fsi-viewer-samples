@@ -15,24 +15,31 @@ const products = {
   }
 };
 
-const mainImg = document.getElementById("main-img").firstElementChild;
-const thumbs = document.getElementById("thumbs").children;
-const priceContainer = document.getElementById("price");
-const commentContainer = document.getElementById("comment");
+const mainImage = document.querySelector("#main-img");
+const thumbImage = document.querySelector("#thumb-img");
+const price = document.querySelector("#price");
+const comment = document.querySelector("#comment");
+const thumbs = document.querySelector("#thumbs");
 
-const switchImageSample = () => {
-  for (let i = 0; i < thumbs.length; i++) {
-    thumbs[i].addEventListener("click", e => {
-      const img = e.target;
-      const productId = img.parentNode.id;
-      const product = products[productId];
-      mainImg.src = product.img;
-      priceContainer.textContent = `Price: $${product.price}`;
-      commentContainer.textContent = product.comment;
-    });
-  }
+mainImage.src = products.burgundy.img;
+price.textContent = products.burgundy.price;
+comment.textContent = products.burgundy.comment;
+
+for (const key in products) {
+  const product = products[key];
+  const div = document.createElement("div");
+  div.style.width = product.width;
+  div.style.height = product.height;
+
+  const img = document.createElement("img");
+  img.src = product.img;
+  img.style.width = "100%";
+  img.style.height = "100%";
+  div.appendChild(img);
+  div.addEventListener("click", function () {
+    mainImage.src = product.img;
+    price.textContent = product.price;
+    comment.textContent = product.comment;
+  });
+  thumbs.appendChild(div);
 }
-
-window.addEventListener("DOMContentLoaded", (event) => {
-  switchImageSample();
-});

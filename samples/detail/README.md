@@ -1,11 +1,12 @@
 # Using FSI Viewer for Image Zoom
 
-This readme describes how the detail page example is achieved using *FSI Viewer*.
+This readme describes how the detail page example is achieved using _FSI Viewer_.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding a simple viewer tag.
 
 # Use Zoom on the website
+
 With an image selected, you can see all the possible publishing options for that particular item by going to the Publish To Web tab.
-For this example, select the *FSI Viewer - White Skin* preset in the *Zoom & Pan* section:
+For this example, select the _FSI Viewer - White Skin_ preset in the _Zoom & Pan_ section:
 
 ![Config Image](readme-detail-1.png)
 
@@ -23,9 +24,10 @@ at the top of your website:
   src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
+
 This will ensure that the FSI Viewer is loaded.
 
-Next, you need to place the *<fsi-viewer>* tag you see in the Publish section where you want the viewer to appear.
+Next, you need to place the _<fsi-viewer>_ tag you see in the Publish section where you want the viewer to appear.
 In our example this looks like this:
 
 ```html

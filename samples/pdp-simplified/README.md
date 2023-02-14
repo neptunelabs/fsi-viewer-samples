@@ -1,6 +1,6 @@
 # Using FSI Viewer for Image Zoom - Custom Skin
 
-This readme describes how the detail page example is achieved using *FSI Viewer* and a custom skin.
+This readme describes how the detail page example is achieved using _FSI Viewer_ and a custom skin.
 The aim of the demo is to show how you can easily integrate images with zoom by just adding a simple
 simple viewer tag.
 
@@ -13,16 +13,16 @@ We have various tutorials on our website to help you learn how:
 - [Add Custom Buttons](https://www.neptunelabs.com/fsi-viewer-js/creating-custom-buttons-for-a-fsi-viewer-js-skin/)
 
 For our example we have created custom buttons and followed the steps in the **Advanced Custom Skins** example.
-The skin CSS needs to be stored on your FSI server in the following path **/_viewers/skins/**
+The skin CSS needs to be stored on your FSI server in the following path **/\_viewers/skins/**
 
 # Use Zoom on the website
 
 With an image selected, you can see all the possible publishing options for that particular item by going to the Publish To Web tab.
-For this example, select the *FSI Viewer - White Skin* preset in the *Zoom & Pan* section:
+For this example, select the _FSI Viewer - White Skin_ preset in the _Zoom & Pan_ section:
 
 ![Config Image](readme-custom-1.png)
 
-The *Skin* section allows you to control the appearance of your viewer by setting the dimensions and format, as well as adding effects or cropping options.
+The _Skin_ section allows you to control the appearance of your viewer by setting the dimensions and format, as well as adding effects or cropping options.
 
 Place your cursor on the Skin parameter and select the folder button at the top:
 
@@ -44,20 +44,22 @@ To display zoom with FSI Viewer, all you need to do is add the script at the top
   src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
+
 This will ensure that the FSI Viewer is loaded.
 
-Next, you need to place the *<fsi-viewer>* tag you see in the Publish section where you want the viewer to appear.
+Next, you need to place the _<fsi-viewer>_ tag you see in the Publish section where you want the viewer to appear.
 In our example this looks like this
 
 ```html
-       <fsi-viewer id="image"
-                   src="images/samples/ssi/backpack/brandon-atchison-J69W3O3WKGQ-unsplash.jpg"
-                   width="100%"
-                   height="100%"
-                   skin="minimal-gr"
-                   debug="true"
-                   plugins="resize,fullScreen"
-                   backgroundColor="#22261e"
+<fsi-viewer
+  id="image"
+  src="images/samples/ssi/backpack/brandon-atchison-J69W3O3WKGQ-unsplash.jpg"
+  width="100%"
+  height="100%"
+  skin="minimal-gr"
+  debug="true"
+  plugins="resize,fullScreen"
+  backgroundColor="#22261e"
 >
 </fsi-viewer>
 ```
