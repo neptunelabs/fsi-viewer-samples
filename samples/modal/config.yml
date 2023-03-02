@@ -1,7 +1,7 @@
 overview:
   title: Product Zoom (Modal)
   image: logo.png
-  description: Shows how a simple product detail page with an integrated modal could look.
+  description: Shows how a simple product detail page with an integrated modal looks.
   order: 2
   facts:
     - JS built FSI Viewer

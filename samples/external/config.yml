@@ -1,7 +1,7 @@
 overview:
   title: External Slider
   image: logo.png
-  description: Shows how a zoom with FSI Viewer and external slider used could look.
+  description: Shows how a zoom with FSI Viewer and external slider used looks.
   order: 4
   facts:
     - JS built FSI Viewer

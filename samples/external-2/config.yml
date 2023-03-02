@@ -1,7 +1,7 @@
 overview:
   title: External Buttons
   image: logo.png
-  description: Shows how product zoom could look with FSI Viewer and external minimalist buttons used.
+  description: Shows how product zoom with FSI Viewer and external minimalist buttons used looks.
   order: 5
   facts:
     - JS built FSI Viewer

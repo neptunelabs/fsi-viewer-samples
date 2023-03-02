@@ -1,7 +1,7 @@
 overview:
   title: No Interface Version
   image: logo.png
-  description: Shows how a simple no interface product zoom version.
+  description: Shows how a simple no interface product zoom version looks.
   order: 3
   facts:
     - JS built FSI Viewer

@@ -1,7 +1,7 @@
 overview:
   title: Custom Product Detail Page
   image: logo.png
-  description: Shows how another product detail page could look with FSI Viewer and a custom skin embedded.
+  description: Shows how another product detail page with FSI Viewer and a custom skin embedded looks.
   order: 7
   facts:
     - JS built FSI Viewer
