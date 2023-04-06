@@ -47,77 +47,39 @@ In our example this will look like this (it's important to choose no UI as a set
 ## Adding the external slider
 
 Afterwards, the external slider input is implemented.
-Add JQuery to the head of the document:
-```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-```
 
 And add the input on the place where you would like to display the slider:
 ```html
 <input type="range" class="form-range" id="js-zoomslider">
 ```
 
-In the **body** tag, two functions are loaded. switchImageSample controls the thumbnails on the side of the viewer, initSlider controls the
-external slider. For this tutorial we only focus on initSlider.
-```html
-<body class="bg-light" onload="initSlider();switchImageSample();">
-```
-
-In our **external.js**, we add the corresponding function:
+In our **external.js**, we add the required steps:
 
 ```javascript
-function initSlider() {
-  new ZoomSliderControl(
-    document.getElementById('image'),
-    document.getElementById('js-zoomslider')
-  );
-}
-```
-First, we get the viewer and slider element by their ID.
-
-```javascript
-  var ZoomSliderControl = function(elViewer, elSlider){
-  var bChangeFromSlider;
-
-  var init = function(){
-  $FSI.addEvent(elSlider, 'input', handleSlider);
-  elViewer.addListener('onZoomChanging', handleZoomChange);
+const handleZoomChange = (fScale, fScaleMax, fPercent) => {
+  if (bChangeFromSlider) return
+  elSlider.value = fPercent
 }
 
+const handleSlider = (evt) => {
+  bChangeFromSlider = true
+  const fPercent = evt.target.value
+  elViewer.setZoom(fPercent, false, false)
+  bChangeFromSlider = false
+}
+
+addEventListener('DOMContentLoaded', (event) => {
+
+  elViewer = document.getElementById('image')
+  elViewer.addListener('onZoomChanging', handleZoomChange)
+
+  elSlider = document.getElementById('js-zoomslider')
+
+  $FSI.addEvent(elSlider, 'input', handleSlider)
+})
 ```
-We add an input event to the slider as well as a listener on the viewer detecting a zoom change.
 
-```javascript
-  var handleZoomChange = function(fScale, fScaleMax, fPercent) {
-  if (bChangeFromSlider) return;
-  elSlider.value = fPercent;
-};
-
-  var handleSlider = function(evt){
-  bChangeFromSlider = true;
-  var fPercent = evt.target.value;
-  elViewer.setZoom(fPercent, false, false);
-  bChangeFromSlider = false;
-};
-
-  init();
-};
-```
-The elViewer.setZoom sets the FSI Viewer zoom level according to the slider input value.
-
-The function scheme is as follows:
-
-```javascript
-setZoom(fZoomPercent, bPreliminary, bAnimate)
-```
-Parameters:
-**nZoom** is a float, range: [0..100]
-
-**bPreliminary** is a boolean, if set to true, image tiles are loaded.
-
-**bAnimate** is a boolean, if set to false, the magnification is set immediately.
-
-For all parameters which can be used, please consult the [manual](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-viewer).
+For all the parameters that can be used, please refer to the [manual](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-viewer).
 
 ## Testing with examples from your own server
 

@@ -23,3 +23,8 @@ function onThumbnailClick(){
     viewer.changeImage(parameters)
   }
 }
+
+addEventListener('DOMContentLoaded', (event) => {
+  switchImageSample();
+});
+

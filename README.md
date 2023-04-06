@@ -6,9 +6,8 @@
 
 
 FSI Viewer
-The JavaScript-based viewer provides a minimalistic, highly-customizable user interface which is easily
-adaptable via CSS empowered by lightning-fast real-time image delivery from FSI Server.
-FSI Layers can be created and controlled as a simple HTML tag and/or via JavaScript API.
+The JavaScript-based viewer provides a minimalist, highly customisable user interface that is easily adaptable via CSS, supported by lightning-fast real-time image delivery from the FSI Server.
+FSI Viewer can be created and controlled as a simple HTML tag and/or via the JavaScript API.
 
 This repository contains examples on how to use and build your own applications.
 
@@ -19,18 +18,26 @@ This repository contains examples on how to use and build your own applications.
 Without starting this project in your IDE, you can discover, develop and customize
 all demos in JSFiddle.
 
-[Flowers in JSFiddle][flowjsf]
+[Simple Product Zoom in JSFiddle][simplejsf]
 
-[Trains in JSFiddle][trainsjsf]
+[Modal Zoom in JSFiddle][modaljsf]
 
-[Kitchen in JSFiddle][kitchenjsf]
+[No Interface Version in JSFiddle][nouijsf]
 
-[Product Detail Page in JSFiddle][pdpjsf]
+[External Slider in JSFiddle][extsliderjsf]
 
-[flowjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/flowers
-[kitchenjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/kitchen
-[pdpjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/pdp
-[trainsjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/trains
+[External Buttons in JSFiddle][extbuttonsjsf]
+
+[Custom Product Detail Page in JSFiddle][customjsf]
+
+[simplejsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/detail
+[modaljsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/modal
+[nouijsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/no-ui
+[extsliderjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/external
+[extbuttonsjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/external-2
+[customjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/pdp-simplified
+
+
 
 ## Start and develop
 

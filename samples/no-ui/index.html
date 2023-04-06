@@ -1,60 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <title>Simple FSI Viewer Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link rel="stylesheet" href='no-ui.css' type="text/css"/>
-  <script src='no-ui.js'></script>
-  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js'></script>
-  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js'></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css">
-</head>
-
-<body class="bg-light" onload="switchImageSample();">
-
-<header class="site-header sticky-top py-1">
-  <nav class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#" aria-label="Product">
-      <img src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/ssi/logo-misc-gre.svg" height="24" alt="">
-    </a>
-    <a class="p-6 d-none d-md-inline-block" href="#">SHOP</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">COLLECTION</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">BLOG</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">CONTACT</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">CART</a>
-  </nav>
-</header>
-
-<main class="content mx-auto">
-  <div class="bg-light d-md-flex flex-md-equal w-100 overflow-hidden">
-    <div class="row px-5 mx-5 py-5">
-      <div class="col-sm-4 pl-5 viewer">
-        <fsi-viewer id="image"
-                    src="images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg"
-                    width="100%"
-                    height="100%"
-                    plugins="resize,fullScreen"
-                    hideUI="true"
-                    backgroundColor="#f8f9fa"
-                    style="position:relative;"
+<div class="container">
+  <div class="overflow-hidden">
+    <div class="row row-cols-1 row-cols-lg-3 g-3 px-5 py-3">
+      <div class="col">
+        <fsi-viewer
+          id="image"
+          class="viewer"
+          src="images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg"
+          width="100%"
+          height="100%"
+          plugins="resize,fullScreen"
+          hideUI="true"
+          backgroundColor="#f8f9fa"
         >
         </fsi-viewer>
       </div>
-      <div class="col-sm-2 viewer overflow-hidden">
-        <div id="img1" class="pb-1">
-          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg&height=200" height="200" alt="">
-        </div>
-        <div id="img2" class="py-1">
-          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-PJRabkuH3_Q-unsplash.jpg&rect=0.05455,0.00679,0.9,0.99185&height=200" height="200" alt="">
-        </div>
-        <div id="img3" class="pt-1">
-          <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&height=200" height="200" alt="">
+      <div class="col overflow-hidden text-center">
+        <div class="row row-cols-3 row-cols-lg-1">
+          <div id="img1" class="col pb-1">
+            <img
+              class="thumbnail img-fluid"
+              src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-glmDobIx4o0-unsplash.jpg&height=200"
+              height="200"
+              alt=""
+            />
+          </div>
+          <div id="img2" class="col py-1">
+            <img
+              class="thumbnail img-fluid"
+              src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-PJRabkuH3_Q-unsplash.jpg&rect=0.05455,0.00679,0.9,0.99185&height=200"
+              height="200"
+              alt=""
+            />
+          </div>
+          <div id="img3" class="col pt-1">
+            <img
+              class="thumbnail img-fluid"
+              src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&height=200"
+              height="200"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-      <div class="col-sm-6 pr-5">
+      <div class="col pr-5">
         <div class="p-3 text-left">
           <h2 class="display-5">Peggy</h2>
           <p>Dress, Corduroy & Cotton</p>
@@ -66,84 +54,48 @@
             <i class="bi bi-star-half"></i>
             <small>(4664) Ratings</small>
           </p>
+          <p>Comfortable and stylish at the same time.</p>
           <p>
-            Comfortable and stylish at the same time.</p>
-          <p>
-            No matter how your day looks like - a stressful workday, casual dinner, or just running errands - Peggy always makes you look great.
+            No matter how your day looks like - a stressful workday, casual dinner, or just running errands - Peggy
+            always makes you look great.
           </p>
           <p>
             <small>Dispatched in 4 working days</small>
           </p>
           <div class="row pb-3">
             <div class="col-4 mx-auto">
-              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+              <img
+                class="thumbnail img-fluid"
+                src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-3FoSvueTVCk-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709"
+                width="150"
+                alt=""
+              />
               <p>Charcoal</p>
             </div>
-            <div class="col-4" >
-              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032" width="150" alt="">
+            <div class="col-4">
+              <img
+                class="thumbnail img-fluid"
+                src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-KFz7sRs0ddI-unsplash.jpg&width=150&rect=0,0,1,0.75032"
+                width="150"
+                alt=""
+              />
               <p>Mountain Grey</p>
             </div>
-            <div class="col-4" >
-              <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709" width="150" alt="">
+            <div class="col-4">
+              <img
+                class="thumbnail img-fluid"
+                src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/showcase/pdp/kate-skumen-n268Z4TSd6M-unsplash.jpg&width=150&rect=0,0.32535,1,0.66709"
+                width="150"
+                alt=""
+              />
               <p>Burgundy</p>
             </div>
           </div>
           <div class="btn-group py-3">
-            <button type="button" class="btn btn-lg btn-outline-secondary">Add to basket</button>
+            <button type="button" class="btn btn-lg btn-outline-dark">Add to basket</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-</main>
-
-<footer class="py-5 footer w-100 overflow-hidden">
-  <div class="container py-5">
-    <div class="row ">
-      <div class="col-lg-3 mb-3">
-        <h4>Example Company</h4>
-        <ul class="list-unstyled small text-muted">
-          <li class="mb-2">Designed based on the <a class="link-secondary" href="https://getbootstrap.com/docs/5.0/examples/">Bootstrap examples</a>. Implemented to show various samples on how to use <a class="link-secondary" href="https://www.neptunelabs.com/fsi-server/">FSI Server</a>.</li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Cool stuff</a></li>
-          <li><a class="link-secondary" href="#">Random feature</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Resource name</a></li>
-          <li><a class="link-secondary" href="#">Another resource</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>Another Resource</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Business</a></li>
-          <li><a class="link-secondary" href="#">Education</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Team</a></li>
-          <li><a class="link-secondary" href="#">Locations</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="credit">
-        Photos by <a class="link-secondary" href="https://unsplash.com/@skumen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kate Skumen</a> on <a class="link-secondary" href="https://unsplash.com/collections/2010716/women?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-</body>
-</html>
+</div>

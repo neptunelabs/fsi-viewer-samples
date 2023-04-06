@@ -1,182 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <title>Simple FSI Image Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link rel="stylesheet" href='pdp.css' type="text/css"/>
-  <script src='pdp.js'></script>
-  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js'></script>
-  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js'></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css">
-</head>
-<body onload="switchImageSample();">
-<header class="site-header sticky-top py-1">
-  <nav class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#" aria-label="Product">
-      <img src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/viewer/logo-bags-gre.svg" height="24" alt="">
-    </a>
-    <a class="p-6 d-none d-md-inline-block" href="#">SHOP</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">COLLECTION</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">BLOG</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">CONTACT</a>
-    <a class="p-6 d-none d-md-inline-block" href="#">CART</a>
-  </nav>
-</header>
-
-<main class="content mx-auto">
-  <div class="d-md-flex flex-md-equal w-100 overflow-hidden content">
-    <div class="row px-5 mx-5 py-5">
-      <div class="col-sm-4 pl-5 viewer">
-        <fsi-viewer id="image"
-                    src="images/samples/ssi/backpack/brandon-atchison-J69W3O3WKGQ-unsplash.jpg"
-                    width="100%"
-                    height="100%"
-                    skin="minimal-gr"
-                    debug="true"
-                    plugins="resize,fullScreen"
-                    backgroundColor="#22261e"
-        >
-        </fsi-viewer>
-      </div>
-      <div class="col-sm-2">
-        <div class="row">
-          <div class="col-4 col-sm-12" id="img1">
-            <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-J69W3O3WKGQ-unsplash.jpg&height=150" height="150" alt="">
-          </div>
-          <div class="col-4 col-sm-12" id="img2" >
-
-            <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-1mJxgw6D02Q-unsplash.jpg&height=150" height="150" alt="">
-          </div>
-          <div class="col-4 col-sm-12" id="img3">
-
-            <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-qrbErP3sjoQ-unsplash.jpg&height=150" height="150" alt="">
-          </div>
-          <div class="col-4 col-sm-12" id="img4" >
-
-            <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-ySt4U0bnDO0-unsplash-rotated.jpg&height=150" height="150" alt="">
-          </div>
-          <div class="col-4 col-sm-12"  id="img5" >
-
-            <img class="thumbnail img-fluid" src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-VJlIRgvfYYk-unsplash.jpg&height=150" height="150" alt="">
+<div class="background">
+  <div class="container mx-auto">
+    <div class="overflow-hidden content">
+      <div class="row row-cols-1 row-cols-lg-2 g-3 px-5 py-3">
+        <div class="col pl-5">
+          <div class="row p-3">
+            <div class="col-9 pl-5">
+              <fsi-viewer
+                backgroundColor="#22261e"
+                class="viewer"
+                debug="true"
+                height="100%"
+                id="image"
+                plugins="resize,fullScreen"
+                skin="minimal-gr"
+                src="images/samples/ssi/backpack/brandon-atchison-J69W3O3WKGQ-unsplash.jpg"
+                width="100%"
+              >
+              </fsi-viewer>
+            </div>
+            <div class="col-3">
+              <div class="row row-cols-5 row-cols-lg-1">
+                <div class="col" id="img1">
+                  <img
+                    alt=""
+                    class="thumbnail img-fluid"
+                    height="100"
+                    src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-J69W3O3WKGQ-unsplash.jpg&height=100"
+                  />
+                </div>
+                <div class="col" id="img2">
+                  <img
+                    alt=""
+                    class="thumbnail img-fluid"
+                    height="100"
+                    src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-1mJxgw6D02Q-unsplash.jpg&height=100"
+                  />
+                </div>
+                <div class="col" id="img3">
+                  <img
+                    alt=""
+                    class="thumbnail img-fluid"
+                    height="100"
+                    src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-qrbErP3sjoQ-unsplash.jpg&height=100"
+                  />
+                </div>
+                <div class="col" id="img4">
+                  <img
+                    alt=""
+                    class="thumbnail img-fluid"
+                    height="100"
+                    src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-ySt4U0bnDO0-unsplash-rotated.jpg&height=100"
+                  />
+                </div>
+                <div class="col" id="img5">
+                  <img
+                    alt=""
+                    class="thumbnail img-fluid"
+                    height="100"
+                    src="{{{fsi.server}}}/{{{fsi.context}}}/server?type=image&source=images/samples/ssi/backpack/brandon-atchison-VJlIRgvfYYk-unsplash.jpg&height=100"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-6 pr-5">
-        <div class="p-3 text-left text-light">
-          <h2 class="display-5">Owen</h2>
-          <p> Camera Bag, Mountain Grey Linen</p>
-          <p>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
-            <small>(4664) Ratings</small>
-          </p>
-          <p>
-            Sturdy, classy and reliable.</p>
-          <p>
-            No matter what you want to bring on your trip - Owen is a fashionable and helpful companion.
-          </p>
-          <p>
-            <small>Dispatched in 4 working days</small>
-          </p>
-          <div class="btn-group py-3">
-            <button type="button" class="btn btn-lg btn-outline-secondary">Learn More</button>
-          </div>
-          <div class="btn-group py-3">
-            <button type="button" class="btn btn-lg btn-outline-secondary">Add to basket</button>
-          </div>
-          <p  class="pt-3">
-            Dimensions:
-          <div class="row">
-            <div class="col-6 text-left">
-              <strong>Height (cm)</strong>
+        <div class="col pr-5">
+          <div class="p-3 text-left text-light">
+            <h2 class="display-5">Owen</h2>
+            <p>Camera Bag, Mountain Grey Linen</p>
+            <p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <small>(4664) Ratings</small>
+            </p>
+            <p>Sturdy, classy and reliable.</p>
+            <p>No matter what you want to bring on your trip - Owen is a fashionable and helpful companion.</p>
+            <p>
+              <small>Dispatched in 4 working days</small>
+            </p>
+            <div class="btn-group py-3">
+              <button class="btn btn-lg btn-outline-light" type="button">Learn More</button>
             </div>
-            <div class="col-6 text-left">
-              65
+            <div class="btn-group py-3">
+              <button class="btn btn-lg btn-outline-light" type="button">Add to basket</button>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6 text-left">
-              <strong>Width (cm)</strong>
+            <p class="pt-3">Dimensions:</p>
+
+            <div class="row">
+              <div class="col-6 text-left">
+                <strong>Height (cm)</strong>
+              </div>
+              <div class="col-6 text-left">65</div>
             </div>
-            <div class="col-6 text-left">
-              35
+            <div class="row">
+              <div class="col-6 text-left">
+                <strong>Width (cm)</strong>
+              </div>
+              <div class="col-6 text-left">35</div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6 text-left ">
-              <strong>Depth (cm)</strong>
+            <div class="row">
+              <div class="col-6 text-left">
+                <strong>Depth (cm)</strong>
+              </div>
+              <div class="col-6 text-left">45</div>
             </div>
-            <div class="col-6 text-left">
-              45
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6 text-left">
-              <strong>Weight (kg)</strong>
-            </div>
-            <div class="col-6 text-left">
-              3
+            <div class="row">
+              <div class="col-6 text-left">
+                <strong>Weight (kg)</strong>
+              </div>
+              <div class="col-6 text-left">3</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-</main>
-
-<footer class="py-5 footer w-100 overflow-hidden">
-  <div class="container py-5">
-    <div class="row ">
-      <div class="col-lg-3 mb-3">
-        <h4>Example Company</h4>
-        <small class="d-block mb-3">&copy; 2017–2021</small>
-        <ul class="list-unstyled small text-muted">
-          <li class="mb-2">Designed based on the <a class="link-secondary" href="https://getbootstrap.com/docs/5.0/examples/">Bootstrap examples</a>. Implemented to show various samples on how to use <a class="link-secondary" href="https://www.neptunelabs.com/fsi-server/">FSI Server</a>.</li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Cool stuff</a></li>
-          <li><a class="link-secondary" href="#">Random feature</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Resource name</a></li>
-          <li><a class="link-secondary" href="#">Another resource</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>Another Resource</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Business</a></li>
-          <li><a class="link-secondary" href="#">Education</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Team</a></li>
-          <li><a class="link-secondary" href="#">Locations</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="credit">
-        Photos by <a class="link-secondary" href="https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brandon Atchison</a> on <a class="link-secondary" href="https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-</body>
-</html>
+</div>

@@ -1,20 +1,42 @@
-title: External Slider
-image: logo.png
-description: Shows how a zoom with FSI Viewer and external slider used could look.
-priority: 4
-facts:
-  - JS built FSI Viewer
-  - external slider
-  - zoom and pan
-jsfiddle:
+overview:
+  title: External Slider
+  image: logo.png
+  description: Shows how a zoom with FSI Viewer and external slider used looks.
+  order: 4
+  facts:
+    - JS built FSI Viewer
+    - external slider
+    - zoom and pan
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/misc-menu.yml
+      highlight: DEAL OF THE DAY
+      featured: true
+      footer:
+        credits:
+          photos:
+            - author: Jonny Caspari
+              link: https://unsplash.com/@jonnysplsh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+            - author: max fuchs
+              link: https://unsplash.com/@designfuchs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+            - author: William Moreland
+              link: https://unsplash.com/@relentlessjpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: false
   mapping:
-    html: "index.html"
+    html: "external.html"
     css: "external.css"
     js: "external.js"
-  resources:
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
-    - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
-    - https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
+jsfiddle:
+  deploy: true
+

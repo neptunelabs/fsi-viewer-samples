@@ -1,19 +1,34 @@
-title: Custom Product Detail Page
-image: logo.png
-description: Shows how another product detail page could look with FSI Viewer and a custom skin embedded.
-priority: 7
-facts:
-  - JS built FSI Viewer
-  - zoom and pan
-  - custom UI
-jsfiddle:
+overview:
+  title: Custom Product Detail Page
+  image: logo.png
+  description: Shows how another product detail page with FSI Viewer and a custom skin embedded looks.
+  order: 7
+  facts:
+    - JS built FSI Viewer
+    - zoom and pan
+    - custom UI
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/misc-menu.yml
+      hero: false
+      featured: true
+      footer:
+        credits:
+          photos:
+            - author: Brandon Atchison
+              link: https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: false
   mapping:
     html: "index.html"
     css: "pdp.css"
     js: "pdp.js"
-  resources:
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/viewer/js/fsiviewer.js"
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
-    - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
+priority: 7

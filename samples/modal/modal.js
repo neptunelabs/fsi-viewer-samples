@@ -1,4 +1,4 @@
-function changeImage(buttonID) {
+const changeImage = (buttonID) => {
   let img;
   let src;
   let curImage = document.getElementById('image');
@@ -19,3 +19,17 @@ function changeImage(buttonID) {
   document.getElementsByTagName("fsi-viewer")[0].changeConfig(undefined, {imagesrc: src});
 }
 
+addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById('exampleModal').addEventListener('shown.bs.modal', (event) => {
+    const viewerEl = event.target.getElementsByClassName('viewer')
+    viewerEl[0].style.display = 'inherit'
+    viewerEl[0].style.height = "599px"
+
+    viewerEl[0].parentElement.style.height = "649px"
+    /*
+    const evt = new Event("resize");
+    evt.FSI_after_treshold = true;
+    document.getElementsByTagName("fsi-viewer")[0].onResize(evt)
+     */
+  });
+});

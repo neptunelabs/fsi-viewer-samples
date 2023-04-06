@@ -1,55 +1,48 @@
-function switchImageSample() {
-  for (var i = 1; i < 4; i++){
-    var el = document.getElementById("img" + i);
-    $FSI.addEvent(el, "click", onThumbnailClick);
+let elSlider, elViewer
+let bChangeFromSlider
+
+const switchImageSample = () => {
+  for (let i = 1; i < 4; i++) {
+    const el = document.getElementById('img' + i)
+    $FSI.addEvent(el, 'click', onThumbnailClick)
   }
 }
 
-function onThumbnailClick(){
+const onThumbnailClick = (evt) => {
+  const img = evt.target
 
-  var img = this.getElementsByTagName("img");
-
-  if (img && img[0]){
-
+  if (img) {
     // get the src attribute
-    var strImageURL = img[0].getAttribute("src") ;
+    const strImageURL = img.getAttribute('src')
 
     // get the "source" parameter value
-    var src = $FSI.utils.getParameterValueFromURL(strImageURL, 'source');
+    const src = $FSI.utils.getParameterValueFromURL(strImageURL, 'source')
 
     // change the image in FSI Viewer
-    var parameters = {"imagePath" : src};
-    var viewer = document.getElementById("image");
-    viewer.changeImage(parameters)
+    elViewer.changeImage({ imagePath: src })
   }
 }
 
-function initSlider() {
-  new ZoomSliderControl(
-    document.getElementById('image'),
-    document.getElementById('js-zoomslider')
-  );
+const handleZoomChange = (fScale, fScaleMax, fPercent) => {
+  if (bChangeFromSlider) return
+  elSlider.value = fPercent
 }
 
-  var ZoomSliderControl = function(elViewer, elSlider){
-  var bChangeFromSlider;
-
-  var init = function(){
-  $FSI.addEvent(elSlider, 'input', handleSlider);
-  elViewer.addListener('onZoomChanging', handleZoomChange);
+const handleSlider = (evt) => {
+  bChangeFromSlider = true
+  const fPercent = evt.target.value
+  elViewer.setZoom(fPercent, false, false)
+  bChangeFromSlider = false
 }
 
-  var handleZoomChange = function(fScale, fScaleMax, fPercent) {
-  if (bChangeFromSlider) return;
-  elSlider.value = fPercent;
-};
+addEventListener('DOMContentLoaded', (event) => {
 
-  var handleSlider = function(evt){
-  bChangeFromSlider = true;
-  var fPercent = evt.target.value;
-  elViewer.setZoom(fPercent, false, false);
-  bChangeFromSlider = false;
-};
+  elViewer = document.getElementById('image')
+  elViewer.addListener('onZoomChanging', handleZoomChange)
 
-  init();
-};
+  elSlider = document.getElementById('js-zoomslider')
+
+  $FSI.addEvent(elSlider, 'input', handleSlider)
+
+  switchImageSample()
+})
