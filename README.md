@@ -28,8 +28,6 @@ all demos in JSFiddle.
 
 [External Buttons in JSFiddle][extbuttonsjsf]
 
-[Detail Page (JSON) in JSFiddle][jsonjsf]
-
 [Custom Product Detail Page in JSFiddle][customjsf]
 
 [simplejsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/detail
@@ -37,7 +35,6 @@ all demos in JSFiddle.
 [nouijsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/no-ui
 [extsliderjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/external
 [extbuttonsjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/external-2
-[jsonjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/pdp
 [customjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-viewer-samples/pdp-simplified
 
 
