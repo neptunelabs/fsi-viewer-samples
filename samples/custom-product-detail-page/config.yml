@@ -29,6 +29,6 @@ sample:
         icons: false
   mapping:
     html: "index.html"
-    css: "pdp.css"
-    js: "pdp.js"
+    css: "style.css"
+    js: "script.js"
 priority: 7

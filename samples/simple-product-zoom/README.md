@@ -8,13 +8,13 @@ The aim of the demo is to show how you can easily integrate images with zoom by 
 With an image selected, you can see all the possible publishing options for that particular item by going to the Publish To Web tab.
 For this example, select the _FSI Viewer - White Skin_ preset in the _Zoom & Pan_ section:
 
-![Config Image](readme-detail-1.png)
+![Config Image](readme-simple-product-zoom-1.png)
 
 The Source Code section allows you to control the appearance of your viewer by setting the dimensions and format, as well as adding effects or cropping options.
 This section also displays the source code for your chosen publishing option, which you can edit and copy to publish the images.
 You will also see the necessary scripts that need to be embedded in the page.
 
-![Config Image](readme-detail-2.png)
+![Config Image](readme-simple-product-zoom-2.png)
 
 To display zoom with FSI Viewer, all you need to do is add the script
 at the top of your website:

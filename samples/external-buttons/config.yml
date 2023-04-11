@@ -30,8 +30,8 @@ sample:
         icons: true
       jquery: true
   mapping:
-    html: "external-buttons.html"
-    css: "external-buttons.css"
-    js: "external-buttons.js"
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
 jsfiddle:
   deploy: true

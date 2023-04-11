@@ -28,7 +28,7 @@ sample:
         icons: true
   mapping:
     html: "index.html"
-    css: "no-ui.css"
-    js: "no-ui.js"
+    css: "style.css"
+    js: "script.js"
 jsfiddle:
   deploy: true

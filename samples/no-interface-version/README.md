@@ -8,13 +8,13 @@ simple viewer tag.
 With an image selected, you can see all the possible publishing options for that particular item by going to the Publish To Web tab.
 For this example, select the *FSI Viewer - No UI* preset in the *Zoom & Pan* section:
 
-![Config Image](readme-no-ui-1.png)
+![Config Image](readme-no-interface-version-1.png)
 
 The Source Code section allows you to control the appearance of your viewer by setting the dimensions and format, as well as adding effects or cropping options.
 This section also displays the source code for your chosen publishing option, which you can edit and copy to publish the images.
 You will also see the necessary scripts that need to be embedded in the page.
 
-![Config Image](readme-no-ui-2.png)
+![Config Image](readme-no-interface-version-2.png)
 
 To display zoom with FSI Viewer, all you need to do is add the script
 at the top of your website:
