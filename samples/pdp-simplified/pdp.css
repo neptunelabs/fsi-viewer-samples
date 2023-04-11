@@ -2,9 +2,13 @@
   background-color: #22261e!important;
 }
 
+.section-divider{
+  background-color: #22261e!important;
+}
+
 @media (max-width: 992px) {
   .viewer {
-    height: 400px!important;
+    height: 600px!important;
   }
 }
 

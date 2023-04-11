@@ -13,7 +13,8 @@ sample:
     components:
       menu:
         template: data/clothing-menu.yml
-        highlight: DEAL OF THE DAY
+      featured:
+        template: data/clothing-featured.yml
       footer:
         credits:
           photos:
