@@ -53,7 +53,7 @@ And add the input on the place where you would like to display the slider:
 <input type="range" class="form-range" id="js-zoomslider">
 ```
 
-In our **external.js**, we add the required steps:
+In our **script.js**, we add the required steps:
 
 ```javascript
 const handleZoomChange = (fScale, fScaleMax, fPercent) => {

@@ -29,7 +29,7 @@ sample:
       bootstrap:
         icons: true
   mapping:
-      html: "detail.html"
-      css: "detail.css"
+      html: "index.html"
+      css: "style.css"
 jsfiddle:
   deploy: true

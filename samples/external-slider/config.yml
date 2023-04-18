@@ -34,9 +34,9 @@ sample:
       bootstrap:
         icons: false
   mapping:
-    html: "external.html"
-    css: "external.css"
-    js: "external.js"
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
 jsfiddle:
   deploy: true
 

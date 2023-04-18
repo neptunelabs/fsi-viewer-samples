@@ -32,7 +32,7 @@ sample:
         icons: true
   mapping:
     html: "index.html"
-    css: "modal.css"
-    js: "modal.js"
+    css: "style.css"
+    js: "script.js"
 jsfiddle:
   deploy: true

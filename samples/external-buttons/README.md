@@ -58,7 +58,7 @@ We pass the ID of this div (**myExternalButtons**) to the FSI Viewer with the fo
 
 **externalButtonContainer="myExternalButtons"**
 
-In order to hide external buttons which are not supposed to be seen in the viewer, we set the following function in our external-buttons.js:
+In order to hide external buttons which are not supposed to be seen in the viewer, we set the following function in our script.js:
 
 ```javascript
 function showHideExternalButton(elButton, strButtonID, bPresentInViewer){

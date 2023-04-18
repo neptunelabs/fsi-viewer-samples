@@ -89,7 +89,7 @@ The images can be toggled using the onClick function set in the right-hand tabs:
   </div>
 </div>
 ```
-In our *modal.js*, the changeImage function contains the functionality to change both the normal image and the image shown in the modal viewer:
+In our *script.js*, the changeImage function contains the functionality to change both the normal image and the image shown in the modal viewer:
 
 ```javascript
 function changeImage(buttonID) {
