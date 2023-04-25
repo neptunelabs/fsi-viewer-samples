@@ -17,3 +17,7 @@
     height: 200px!important;
   }
 }
+
+.fsi-root .fsi-ui-logo {
+  display: none!important;
+}
