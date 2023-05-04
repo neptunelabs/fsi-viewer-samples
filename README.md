@@ -47,8 +47,7 @@ These examples rely on a framework that uses [Grunt][Grunt], [Browsersync][Brows
 [Bootstrap][Bootstrap] and Sass to launch a local server,
 replace template variables and pass changes directly to the browser window.
 
-However, these dependencies are generally **not required** for the using images with FSI
-Server!
+However, these dependencies are generally **not required** for the use of FSI Server!
 
 ## Requirements
 
@@ -61,7 +60,7 @@ change the settings.
 
 ## Documentation
 
-Official JS API Docs can be found here: [https://docs.neptunelabs.com/fsi-viewer/latest/][Docs]
+For further information on the FSI Viewer and FSI Server, please refer to the official [documentation][Docs].
 
 [Docs]: https://docs.neptunelabs.com/fsi-viewer/latest/
 [Server]: https://www.neptunelabs.com/get/
