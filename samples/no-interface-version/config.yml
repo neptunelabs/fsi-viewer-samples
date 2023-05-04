@@ -1,0 +1,34 @@
+overview:
+  title: No Interface Version
+  image: logo.png
+  description: Shows how a simple no interface product zoom version looks.
+  order: 3
+  facts:
+    - JS built FSI Viewer
+    - zoom and pan
+    - minimalist no interface version
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/clothing-menu.yml
+      highlight: DEAL OF THE DAY
+      footer:
+        credits:
+          photos:
+            - author: Kate Skumen
+              link: https://unsplash.com/@skumen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: true
+  mapping:
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
+playground:
+  deploy: true

@@ -1,0 +1,35 @@
+overview:
+  title: Simple Product Zoom
+  image: logo.png
+  description: Shows how a simple product detail page could look with FSI Viewer used.
+  order: 1
+  facts:
+    - JS built FSI Viewer
+    - zoom and pan
+    - plain menu
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/clothing-menu.yml
+      featured:
+        template: data/clothing-featured.yml
+      highlight: DEAL OF THE DAY
+      footer:
+        credits:
+          photos:
+            - author: Artem Bondarchuk
+              link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: true
+  mapping:
+      html: "index.html"
+      css: "style.css"
+playground:
+  deploy: true

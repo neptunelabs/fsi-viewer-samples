@@ -1,0 +1,41 @@
+overview:
+  title: External Slider
+  image: logo.png
+  description: Shows how a zoom with FSI Viewer and external slider used looks.
+  order: 4
+  facts:
+    - JS built FSI Viewer
+    - external slider
+    - zoom and pan
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/misc-menu.yml
+      highlight: DEAL OF THE DAY
+      featured: true
+      footer:
+        credits:
+          photos:
+            - author: Jonny Caspari
+              link: https://unsplash.com/@jonnysplsh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+            - author: max fuchs
+              link: https://unsplash.com/@designfuchs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+            - author: William Moreland
+              link: https://unsplash.com/@relentlessjpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: false
+  mapping:
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
+playground:
+  deploy: true

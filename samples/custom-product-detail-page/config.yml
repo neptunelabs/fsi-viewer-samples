@@ -1,0 +1,35 @@
+overview:
+  title: Custom Product Detail Page
+  image: logo.png
+  description: Shows how another product detail page with FSI Viewer and a custom skin embedded looks.
+  order: 7
+  facts:
+    - JS built FSI Viewer
+    - zoom and pan
+    - custom UI
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/misc-menu.yml
+      hero: false
+      featured: true
+      footer:
+        credits:
+          photos:
+            - author: Brandon Atchison
+              link: https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: false
+  mapping:
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
+playground:
+  deploy: true
