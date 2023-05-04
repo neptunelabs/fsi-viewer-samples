@@ -15,7 +15,7 @@ This repository contains examples on how to use and build your own applications.
 ## Getting Started
 
 Without starting this project in your IDE, you can discover all the
-demos on the [Github Pages][GHPages] or develop and customise in [Stackblitz][Stackblitz].
+demos on the [GitHub Pages][GHPages] or develop and customise in [StackBlitz][StackBlitz].
 
 
 ## Start and develop
@@ -69,4 +69,4 @@ For further information on the FSI Viewer and FSI Server, please refer to the of
 [Browsersync]: https://browsersync.io/
 [Bootstrap]: https://getbootstrap.com/
 [GHPages]: https://neptunelabs.github.io/fsi-viewer-samples/
-[Stackblitz]: https://stackblitz.com/edit/fsi-viewer-samples
+[StackBlitz]: https://stackblitz.com/edit/fsi-viewer-samples
