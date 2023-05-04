@@ -9,4 +9,4 @@ sample:
     js: 'script.js'
     css: 'style.css'
 playground:
-  deploy: true
+  deploy: false
