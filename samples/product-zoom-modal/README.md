@@ -8,7 +8,7 @@ Please note that this example uses the bootstrap modal.
 We will add an image that opens a modal when clicked. Please note that we are using the bootstrap modal technique.
 ```html
 <div class="col-sm-7" data-bs-toggle="modal" data-bs-target="#exampleModal" >
-        <img id="image" class="img-fluid zoom-image" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940" width="940" alt="">
+        <img id="image" class="img-fluid zoom-image" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071534.jpg&width=840" width="940" alt="">
       </div>
 ```
 
@@ -26,7 +26,7 @@ The data-bs target, as seen above, must have the same name as the ID of your mod
           <fsi-viewer id="img-viewer"
                       plugins="fullScreen,resize"
                       skin="white" width="1100px" height="700px"
-                      src="images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg">
+                      src="images/samples/ssi/furniture/architect-2071534.jpg">
           </fsi-viewer>
         </div>
       </div>
@@ -66,7 +66,7 @@ In our example, this will look like the above:
   id="img-viewer"
   plugins="fullScreen,resize"
   skin="white" width="1100px" height="700px"
-  src="images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg">
+  src="images/samples/ssi/furniture/architect-2071534.jpg">
 </fsi-viewer>
 ```
 
@@ -78,14 +78,14 @@ The images can be toggled using the onClick function set in the right-hand tabs:
 ```html
 <div class="row pb-3">
   <div class="col-4">
-    <img class="thumbnail img-fluid" onclick="changeImage('0')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=150&rect=0.15187,0,0.84813,1" width="150" alt="">
+    <img class="thumbnail img-fluid" onclick="changeImage('0')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071534.jpg&width=150&rect=0.15187,0,0.84813,1" width="150" alt="">
   </div>
   <div class="col-4" >
-    <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg&width=150&rect=0,0.29634,1,0.66709" width="150" alt="">
+    <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071536.jpg&width=150&rect=0,0.29634,1,0.66709" width="150" alt="">
 
   </div>
   <div class="col-4" >
-    <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg&width=150&rect=0.25612,0,0.74388,0.99622" width="150" alt="">
+    <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071538.jpg&width=150&rect=0.25612,0,0.74388,0.99622" width="150" alt="">
   </div>
 </div>
 ```
@@ -98,20 +98,20 @@ let src;
 let curImage = document.getElementById('image');
 switch (buttonID) {
 case "0":
-img =  '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940';
-src = 'images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg';
+img =  '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071534.jpg&width=940';
+src = 'images/samples/ssi/furniture/architect-2071534.jpg';
 break
 case "1":
-img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg&width=940&rect=0,0.29634,1,0.66709';
-src = 'images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg';
+img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071536.jpg&width=940&rect=0,0.29634,1,0.66709';
+src = 'images/samples/ssi/furniture/architect-2071536.jpg';
 break
 case "2":
-img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg&width=940';
-src = 'images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg';
+img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071538.jpg&width=940';
+src = 'images/samples/ssi/furniture/architect-2071538.jpg';
 break
 default:
-img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940';
-src = 'images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg';
+img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/architect-2071534.jpg&width=940';
+src = 'images/samples/ssi/furniture/architect-2071534.jpg';
 }
 curImage.src = img;
 document.getElementsByTagName("fsi-viewer")[0].changeConfig(undefined, {imagesrc: src});
