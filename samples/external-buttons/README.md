@@ -48,8 +48,8 @@ Then we need to add the button container:
 ```html
         <div class="position-absolute menu" id="myExternalButtons">
           <div style="font-size:32px" class="fsi-root fsi-viewer-root" id="myExternalMenuBar">
-            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//docs.neptunelabs.com/fsi/static/assets/samples/ssi/minus.svg" height="30" alt=""></div>
-            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" alt="" src="//docs.neptunelabs.com/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
+            <div fsi-cmd="ZoomOut" class="icon"><img class="position-absolute zoom-icon" src="//fsi.domain.tld/fsi/static/assets/samples/ssi/minus.svg" height="30" alt=""></div>
+            <div fsi-cmd="ZoomIn" class="icon" style="margin-right:0.1em" ><img class="position-absolute zoom-icon" alt="" src="//fsi.domain.tld/fsi/static/assets/samples/ssi/plus.svg" height="30"></div>
           </div>
         </div>
 ```
