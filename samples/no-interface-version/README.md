@@ -21,7 +21,7 @@ at the top of your website:
 
 ```html
 <script
-  src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi.domain.tld/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This will ensure that the FSI Viewer is loaded.

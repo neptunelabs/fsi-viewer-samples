@@ -22,7 +22,7 @@ to the head of your website:
 
 ```html
 <script
-  src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi.domain.tld/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This ensures that FSI Viewer is loaded.
