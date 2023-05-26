@@ -8,7 +8,7 @@ Please note that this example uses the bootstrap modal.
 We will add an image that opens a modal when clicked. Please note that we are using the bootstrap modal technique.
 ```html
 <div class="col-sm-7" data-bs-toggle="modal" data-bs-target="#exampleModal" >
-        <img id="image" class="img-fluid zoom-image" src="//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940" width="940" alt="">
+        <img id="image" class="img-fluid zoom-image" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940" width="940" alt="">
       </div>
 ```
 
@@ -53,7 +53,7 @@ to the head of your website:
 
 ```html
 <script
-  src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi.domain.tld/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This will ensure that the FSI Viewer is loaded.
@@ -78,14 +78,14 @@ The images can be toggled using the onClick function set in the right-hand tabs:
 ```html
 <div class="row pb-3">
   <div class="col-4">
-    <img class="thumbnail img-fluid" onclick="changeImage('0')" src="//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=150&rect=0.15187,0,0.84813,1" width="150" alt="">
+    <img class="thumbnail img-fluid" onclick="changeImage('0')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=150&rect=0.15187,0,0.84813,1" width="150" alt="">
   </div>
   <div class="col-4" >
-    <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg&width=150&rect=0,0.29634,1,0.66709" width="150" alt="">
+    <img class="thumbnail img-fluid" onclick="changeImage('1')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg&width=150&rect=0,0.29634,1,0.66709" width="150" alt="">
 
   </div>
   <div class="col-4" >
-    <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg&width=150&rect=0.25612,0,0.74388,0.99622" width="150" alt="">
+    <img class="thumbnail img-fluid" onclick="changeImage('2')" src="//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg&width=150&rect=0.25612,0,0.74388,0.99622" width="150" alt="">
   </div>
 </div>
 ```
@@ -98,19 +98,19 @@ let src;
 let curImage = document.getElementById('image');
 switch (buttonID) {
 case "0":
-img =  '//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940';
+img =  '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940';
 src = 'images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg';
 break
 case "1":
-img = '//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg&width=940&rect=0,0.29634,1,0.66709';
+img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg&width=940&rect=0,0.29634,1,0.66709';
 src = 'images/samples/ssi/furniture/nathan-oakley-jSbBnR22cXc-unsplash.jpg';
 break
 case "2":
-img = '//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg&width=940';
+img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg&width=940';
 src = 'images/samples/ssi/furniture/nathan-oakley-CZysNmnvEJg-unsplash.jpg';
 break
 default:
-img = '//docs.neptunelabs.com/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940';
+img = '//fsi.domain.tld/fsi/server?type=image&source=images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg&width=940';
 src = 'images/samples/ssi/furniture/nathan-oakley-o4s4AfTgOvg-unsplash.jpg';
 }
 curImage.src = img;

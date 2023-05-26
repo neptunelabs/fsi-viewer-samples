@@ -41,7 +41,7 @@ To display zoom with FSI Viewer, all you need to do is add the script at the top
 
 ```html
 <script
-  src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi.domain.tld/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 
