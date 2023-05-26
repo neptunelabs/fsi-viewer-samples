@@ -1,4 +1,4 @@
-# [FSI Viewer](https://www.neptunelabs.com) &middot; Samples
+# [FSI Viewer](https://www.neptunelabs.com) &middot; [Samples][GHPages]
 | ***Pixel-perfect*** | ***High-DPI-ready*** | ***Fast :rocket:*** | ***Hackable*** | ***Consistent*** |
 |:-----------------:|:-------------:|:---------------:|:---------------:|:---------------:|
 
