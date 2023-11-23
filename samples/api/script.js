@@ -1,46 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
 
-  let instance
-
-  document.getElementById("zoomBtn").addEventListener("click", () => {
+  document.getElementById('zoomBtn').addEventListener('click', () => {
 
     let showTeaser = true
-    let teaserZoomPercent = 20
+    let teaserZoomPercent = 10
 
-    instance = new $FSI.Viewer('zoomEle',{
+    let instance = new $FSI.Viewer('zoomEle', {
       src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
       debug: false,
       plugins: 'fullScreen',
       skin: 'example',
       width: '640',
       height: '427',
-    })
+      // listen for finished loading FSI Viewer and becomes interactive
+      onReady: () => {
+        // show FSI Viewer instance and hide image
+        document.getElementById('zoomEle').style.visibility = 'visible'
+        document.getElementById('zoomImg').style.display = 'none'
+        document.getElementById('zoomBtn').style.display = 'none'
 
-    instance.addListener('onReady', () => {
-      hideImg()
-      if (showTeaser) {
-        setTimeout(() => {
-          instance.setZoom(teaserZoomPercent, true, true)
-        }, 500)
-      }
-    })
+        if (showTeaser) {
+          setTimeout(() => {
 
-    instance.addListener('onViewChanged', (viewString) => {
-      if (showTeaser) {
-        showTeaser = false
-        setTimeout(() => {
-          instance.resetView()
-        }, 800)
-      }
+            instance.setZoom(teaserZoomPercent, true, true)
+          }, 500)
+        }
+      },
+      // listen when zoom is finished
+      onViewChanged: (view) => {
+        if (showTeaser) {
+          showTeaser = false
+          setTimeout(() => {
+            // reset viewer - the user can interact with the UI
+            instance.resetView()
+          }, 800)
+        }
+      },
     })
 
     instance.start()
-
-    function hideImg () {
-      document.getElementById("zoomEle").style.visibility = "visible"
-      document.getElementById("zoomImg").style.display = "none"
-      document.getElementById("zoomBtn").style.display = "none"
-    }
 
   })
 
