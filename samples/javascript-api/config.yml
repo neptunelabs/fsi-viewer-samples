@@ -1,7 +1,7 @@
 overview:
-  title: API Sample
+  title: JavaScript API
   image: logo.png
-  description: Learn how to use the JavaScrip Viewer API with a simple demo.
+  description: Learn how to use the JavaScript Viewer API with a simple demo.
   order: 98
   facts:
     - JS built FSI Viewer
