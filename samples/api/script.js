@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.getElementById("zoomBtn").addEventListener("click", () => {
 
-    let teaser = true
+    let showTeaser = true
     let teaserZoomPercent = 20
 
     instance = new $FSI.Viewer('zoomEle',{
@@ -18,19 +18,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     instance.addListener('onReady', () => {
       hideImg()
-      setTimeout(()=>{
-        instance.setZoom(teaserZoomPercent, true, true)
-      }, 500);
+      if (showTeaser) {
+        setTimeout(() => {
+          instance.setZoom(teaserZoomPercent, true, true)
+        }, 500)
+      }
     })
-    instance.addListener('onProgress', (percent) => {
-      console.log('onProgress', percent)
-    })
+
     instance.addListener('onViewChanged', (viewString) => {
-      if (teaser) {
-        teaser = false;
+      if (showTeaser) {
+        showTeaser = false;
         setTimeout(() => {
           instance.resetView()
-        }, 800);
+        }, 800)
       }
     })
 
