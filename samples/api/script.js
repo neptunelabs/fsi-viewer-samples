@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     instance = new $FSI.Viewer('zoomEle',{
       src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
-      debug: true,
-      plugins: 'resize,fullScreen',
+      debug: false,
+      plugins: 'fullScreen',
       skin: 'example',
       width: '640',
       height: '427',
-    });
+    })
 
     instance.addListener('onReady', () => {
       hideImg()
@@ -27,21 +27,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     instance.addListener('onViewChanged', (viewString) => {
       if (showTeaser) {
-        showTeaser = false;
+        showTeaser = false
         setTimeout(() => {
           instance.resetView()
         }, 800)
       }
     })
 
-    instance.start();
+    instance.start()
 
     function hideImg () {
-      document.getElementById("zoomEle").style.visibility = "visible";
-      document.getElementById("zoomImg").style.display = "none";
-      document.getElementById("zoomBtn").style.display = "none";
+      document.getElementById("zoomEle").style.visibility = "visible"
+      document.getElementById("zoomImg").style.display = "none"
+      document.getElementById("zoomBtn").style.display = "none"
     }
 
-  });
+  })
 
-});
+})
