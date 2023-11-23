@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function changeZoom () {
-      instance.setZoom('50', true, true)
+      instance.setZoom('20', true, true)
       setTimeout(resetZoom, 500);
     }
 
