@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let teaserZoomPercent = 10
 
     function showViewer() {
-      console.log('showViewer should happen now?')
       // show FSI Viewer instance and hide image
       document.getElementById('zoomEle').style.visibility = 'visible'
       document.getElementById('zoomImg').style.display = 'none'
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function viewChange() {
-      console.log('viewChange should happen now?')
       if (showTeaser) {
         showTeaser = false
         setTimeout(() => {
