@@ -4,19 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let showTeaser = true
     let teaserZoomPercent = 10
 
-    const container = document.getElementById('zoomEle');
-    const instance = $FSI.createNode("fsi-viewer", {
-      src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
-      debug: false,
-      plugins: 'fullScreen',
-      skin: 'example',
-      width: '640',
-      height: '427',
-      id : 'myViewer'
-    })
-    container.appendChild(instance)
-
-    function showViewer() {
+    var show = function showViewer() {
       // show FSI Viewer instance and hide image
       container.style.visibility = 'visible'
       document.getElementById('zoomImg').style.display = 'none'
@@ -28,20 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    function viewChange() {
-      if (showTeaser) {
-        showTeaser = false
-        setTimeout(() => {
-          // reset viewer - the user can interact with the UI
-          instance.resetView()
-        }, 800)
-      }
-    }
-
+    const container = document.getElementById('zoomEle');
+    const instance = $FSI.createNode("fsi-viewer", {
+      src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
+      debug: false,
+      plugins: 'fullScreen',
+      skin: 'example',
+      width: '640',
+      height: '427',
+      id : 'myViewer',
+      onReady : show(),
+      onViewChanged: (view) => {
+        if (showTeaser) {
+          showTeaser = false
+          setTimeout(() => {
+            // reset viewer - the user can interact with the UI
+            instance.resetView()
+          }, 800)
+        }
+      },
+    })
+    container.appendChild(instance)
     instance.start()
-
-    instance.addListener("onReady", showViewer);
-    instance.addListener("onViewChanged", viewChange);
   })
 
 })
