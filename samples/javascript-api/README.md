@@ -54,24 +54,13 @@ The switch on button click is achieved via JS in the corresponding `script.js`:
 document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('zoomBtn').addEventListener('click', () => {
+
     let showTeaser = true
-    let teaserZoomPercent = 10
+    const teaserZoomPercent = 10
 
-    const container = document.getElementById('zoomEle');
-    const instance = $FSI.createNode("fsi-viewer", {
-      src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
-      debug: false,
-      plugins: 'fullScreen',
-      skin: 'example',
-      width: '640',
-      height: '427',
-      id : 'myViewer'
-    })
-    container.appendChild(instance)
-
-    function showViewer() {
+    const show = () => {
       // show FSI Viewer instance and hide image
-      container.style.visibility = 'visible'
+      document.getElementById('zoomEle').style.visibility = 'visible'
       document.getElementById('zoomImg').style.display = 'none'
       document.getElementById('zoomBtn').style.display = 'none'
       if (showTeaser) {
@@ -81,34 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    function viewChange() {
-      if (showTeaser) {
-        showTeaser = false
-        setTimeout(() => {
-          // reset viewer - the user can interact with the UI
-          instance.resetView()
-        }, 800)
-      }
-    }
-
-    instance.start()
-
-    instance.addListener("onReady", showViewer);
-    instance.addListener("onViewChanged", viewChange);
+    const instance = $FSI.createNode("fsi-viewer", {
+      src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
+      debug: false,
+      plugins: 'fullScreen',
+      skin: 'example',
+      width: '640',
+      height: '427',
+      id : 'myViewer',
+      onReady : show,
+      onViewChanged: (view) => {
+        if (showTeaser) {
+          showTeaser = false
+          setTimeout(() => {
+            // reset viewer - the user can interact with the UI
+            instance.resetView()
+          }, 800)
+        }
+      },
+    })
+    document.getElementById('zoomEle').appendChild(instance)
   })
 
 })
+
 ```
 
 A click on the `zoomBtn` element will initialise a new FSI Viewer element in the `zoomEle` element.
-For this we use `$FSI.createNode` which creates the <fsi-viewer> custom tag which is appended to the `zoomEle` element.
 
-We then create the function `showViewer` that is called when the `onReady` callback is executed (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
+We create the function `showViewer` that is called when the `onReady` callback is executed (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
 Only when the viewer is ready will the viewer element will be set to visible, while the image and button are set to `display:none`.
 
 If `showTeaser` is true, the method `setZoom` will be executed: `instance.setZoom(teaserZoomPercent, true, true)` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#setzoom)).
 
-The function `viewChange` is called when the  callback `onViewChanged` is executed (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onviewchanged)).
-It listens when the zoom is finished, sets `showTeaser` to false and uses the `resetView` method (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#resetview)).
+For initialization, we use `$FSI.createNode` which creates the <fsi-viewer> custom tag which is appended to the `zoomEle` element.
 
-It is important to use the `start()` method, as it is mandatory for the viewer initialisation (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#start)).
+The callback `onViewChanged` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onviewchanged)) listens when the zoom is finished, sets `showTeaser` to false and uses the `resetView` method (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#resetview)).
