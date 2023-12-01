@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('zoomBtn').addEventListener('click', () => {
-    const showTeaser = true
+
+    let showTeaser = true
     const teaserZoomPercent = 10
 
     const show = () => {
