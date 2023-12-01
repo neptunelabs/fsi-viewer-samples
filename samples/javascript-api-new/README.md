@@ -54,31 +54,31 @@ The switch on button click is achieved via JS in the corresponding `script.js`:
 document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('zoomBtn').addEventListener('click', () => {
-
     let showTeaser = true
     let teaserZoomPercent = 10
 
-    let instance = new $FSI.Viewer('zoomEle', {
+    var show = function showViewer() {
+      // show FSI Viewer instance and hide image
+      container.style.visibility = 'visible'
+      document.getElementById('zoomImg').style.display = 'none'
+      document.getElementById('zoomBtn').style.display = 'none'
+      if (showTeaser) {
+        setTimeout(() => {
+          instance.setZoom(teaserZoomPercent, true, true)
+        }, 500)
+      }
+    }
+
+    const container = document.getElementById('zoomEle');
+    const instance = $FSI.createNode("fsi-viewer", {
       src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
       debug: false,
       plugins: 'fullScreen',
       skin: 'example',
       width: '640',
       height: '427',
-      // listen for finished loading FSI Viewer and becomes interactive
-      onReady: () => {
-        // show FSI Viewer instance and hide image
-        document.getElementById('zoomEle').style.visibility = 'visible'
-        document.getElementById('zoomImg').style.display = 'none'
-        document.getElementById('zoomBtn').style.display = 'none'
-
-        if (showTeaser) {
-          setTimeout(() => {
-            instance.setZoom(teaserZoomPercent, true, true)
-          }, 500)
-        }
-      },
-      // listen when zoom is finished
+      id : 'myViewer',
+      onReady : show(),
       onViewChanged: (view) => {
         if (showTeaser) {
           showTeaser = false
@@ -89,21 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
     })
-
-    instance.start()
-
+    container.appendChild(instance)
   })
-})
 
+})
 ```
 
 A click on the `zoomBtn` element will initialise a new FSI Viewer element in the `zoomEle` element.
 
-With the `onReady` callback (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
+We create the function `showViewer` that is called when the `onReady` callback is executed (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
 Only when the viewer is ready will the viewer element will be set to visible, while the image and button are set to `display:none`.
 
 If `showTeaser` is true, the method `setZoom` will be executed: `instance.setZoom(teaserZoomPercent, true, true)` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#setzoom)).
 
-The callback `onViewChanged` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onviewchanged)) listens when the zoom is finished,
-sets `showTeaser` to false and uses the `resetView` method (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#resetview)).
-It is important to use the `start()` method afterwards, as it is mandatory for the viewer initialisation (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#start)).
+For initialization, we use `$FSI.createNode` which creates the <fsi-viewer> custom tag which is appended to the `zoomEle` element.
+
+The callback `onViewChanged` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onviewchanged)) listens when the zoom is finished, sets `showTeaser` to false and uses the `resetView` method (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#resetview)).

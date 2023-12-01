@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     })
     container.appendChild(instance)
-    instance.start()
   })
 
 })
