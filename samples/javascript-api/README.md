@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 A click on the `zoomBtn` element will initialise a new FSI Viewer element in the `zoomEle` element.
 
+The viewer itself is created with `$FSI.createNode("fsi-viewer",{parameters})`.
+
 We create `show` that is called when the `onReady` callback is executed (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
 Only when the viewer is ready will the viewer element will be set to visible, while the image and button are set to `display:none`.
 
