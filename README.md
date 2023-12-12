@@ -5,12 +5,12 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)][License]
 
 
-The JavaScript-based viewer provides a minimalist, highly customisable user interface that is easily adaptable via CSS, supported by lightning-fast real-time image delivery from the FSI Server.
+The zoom viewer provides a minimalist, highly customisable user interface that is easily adaptable via CSS, supported by lightning-fast real-time image delivery from the FSI Server.
 FSI Viewer can be created and controlled as a simple HTML tag and/or via the JavaScript API.
 
 This repository contains examples on how to use and build your own applications.
 
-![Project Image](project.apng)
+[![Project Image](project.apng)][GHPages]
 
 ## Getting Started
 
