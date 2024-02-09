@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const instance = $FSI.createNode("fsi-viewer", {
+    const instance = $FSI.createNode('fsi-viewer', {
       src: 'images/samples/Shoe/View2/sneaker-both-13.jpg',
       debug: false,
       plugins: 'fullScreen',
       skin: 'example',
       width: '640',
       height: '427',
-      id : 'myViewer',
-      onReady : show,
+      id: 'myViewer',
+      onReady: show,
       onViewChanged: (view) => {
         if (showTeaser) {
           showTeaser = false

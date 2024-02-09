@@ -2,8 +2,8 @@
   position: relative;
   height: 427px;
   width: 640px;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .productContainer .img {
@@ -11,9 +11,9 @@
   position: absolute;
 }
 
-.productContainer .zoomContainer{
-  padding: 0px;
-  top:0;
+.productContainer .zoomContainer {
+  padding: 0;
+  top: 0;
   right: 0;
   margin: 0;
   position: absolute;
