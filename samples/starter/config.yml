@@ -4,6 +4,8 @@ overview:
   description: Start your own demo
   order: 99
 sample:
+  template:
+    schema: vanilla
   mapping:
     html: 'index.html'
     js: 'script.js'

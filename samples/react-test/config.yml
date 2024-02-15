@@ -1,0 +1,16 @@
+overview:
+  title: React Test
+  image: logo.png
+  description: React
+  order: 2
+  facts:
+    - XXX
+sample:
+  template:
+    schema: react-taupe
+    components:
+      fsi:
+        viewer: true
+      react: true
+      bootstrap:
+        icons: true

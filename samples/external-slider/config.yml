@@ -9,7 +9,7 @@ overview:
     - zoom and pan
 sample:
   template:
-    schema: framework-2023
+    schema: bootstrap-taupe
     components:
       menu:
         template: data/misc-menu.yml
@@ -33,9 +33,3 @@ sample:
         viewer: true
       bootstrap:
         icons: false
-  mapping:
-    html: "index.html"
-    css: "style.css"
-    js: "script.js"
-playground:
-  deploy: true

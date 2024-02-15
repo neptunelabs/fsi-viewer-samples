@@ -9,7 +9,7 @@ overview:
     - plain menu
 sample:
   template:
-    schema: framework-2023
+    schema: bootstrap-taupe
     components:
       menu:
         template: data/clothing-menu.yml
@@ -28,8 +28,3 @@ sample:
         viewer: true
       bootstrap:
         icons: true
-  mapping:
-      html: "index.html"
-      css: "style.css"
-playground:
-  deploy: true
