@@ -9,6 +9,8 @@ sample:
   template:
     schema: react-taupe
     components:
+      menu:
+        template: data/furniture-menu.yml
       fsi:
         viewer: true
       react: true
