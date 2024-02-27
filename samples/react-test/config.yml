@@ -9,10 +9,17 @@ sample:
   template:
     schema: react-taupe
     components:
-      menu:
-        template: data/furniture-menu.yml
       fsi:
         viewer: true
-      react: true
+      react:
+        theme: data/clothing.yml
+        data:
+          credits:
+            photos:
+              - author: Artem Bondarchuk
+                link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+                platform: Unsplash
+            viewer:
+              link: https://www.neptunelabs.com/fsi-viewer/
       bootstrap:
         icons: true
