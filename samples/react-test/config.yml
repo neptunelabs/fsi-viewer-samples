@@ -1,10 +1,11 @@
 overview:
-  title: React Test
+  title: React
   image: logo.png
-  description: React
-  order: 2
+  description: Shows how FSI components can be implemented in React.
+  order: 98
   facts:
-    - XXX
+    - Sample component containing FSI ThumbBar
+    - FSI Component
 sample:
   template:
     schema: react-taupe
