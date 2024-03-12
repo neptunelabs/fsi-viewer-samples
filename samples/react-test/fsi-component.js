@@ -19,7 +19,7 @@ class FSIComponent extends React.Component {
     return {
       ref:this.ref,
       autoInit:false,
-      skin:"black-flat"
+      skin:"white"
     }
   }
 

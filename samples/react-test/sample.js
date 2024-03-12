@@ -4,7 +4,8 @@ const Sample = () => {
     <div className="container">
       <div className="row row-cols-1 row-cols-lg-2 g-3 pr-5 py-3">
         <div className="col">
-          <FSIComponent tagName="fsi-viewer" id={"Viewer_2D"} width={"100%"} height={"500px"} src={"images/samples/bag.tif"}
+          <FSIComponent tagName="fsi-viewer" id={"Viewer_2D"} width={"100%"} height={"450px"}
+                        src={"images/samples/Shoe/View2/sneaker-both-13.jpg"}
                         plugins={"FullScreen,Resize"} />
         </div>
         <div className="col mx-auto">
@@ -13,11 +14,11 @@ const Sample = () => {
             <p>Sneaker, Camouflage Suede</p>
             <p></p>
             <p>
-              <i className="bi bi-star-fill"></i>
-              <i className="bi bi-star-fill"></i>
-              <i className="bi bi-star-fill"></i>
-              <i className="bi bi-star-fill"></i>
-              <i className="bi bi-star-half"></i>
+              <i className="bi bi-star-fill"></i>&nbsp;
+              <i className="bi bi-star-fill"></i>&nbsp;
+              <i className="bi bi-star-fill"></i>&nbsp;
+              <i className="bi bi-star-fill"></i>&nbsp;
+              <i className="bi bi-star-half"></i>&nbsp;
               <small>(4664) Ratings</small>
             </p>
             <p>Sturdy, classy and minimal.</p>
