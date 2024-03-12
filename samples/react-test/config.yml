@@ -10,6 +10,25 @@ sample:
   template:
     schema: react-taupe
     components:
+      menu:
+        template: data/clothing-menu.yml
+      featured:
+        template: data/clothing-featured.yml
+      highlight: DEAL OF THE DAY
+      footer:
+        credits:
+          photos:
+            - author: Artem Bondarchuk
+              link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+      bootstrap:
+        icons: true
+
+    xcomponents:
       fsi:
         viewer: true
       react:
