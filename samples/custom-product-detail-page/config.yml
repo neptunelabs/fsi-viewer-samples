@@ -7,24 +7,21 @@ overview:
     - JS built FSI Viewer
     - zoom and pan
     - custom UI
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/misc-menu.yml
-      hero: false
-      featured: true
-      footer:
-        credits:
-          photos:
-            - author: Brandon Atchison
-              link: https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-              platform: Unsplash
-          viewer:
-            link: https://www.neptunelabs.com/fsi-viewer/
-      fsi:
-        viewer: true
-      bootstrap:
-        icons: false
-
+  menu:
+    data: misc-menu.yml
+  hero: false
+  featured: true
+  footer:
+    credits:
+      photos:
+        - author: Brandon Atchison
+          link: https://unsplash.com/@b_atchison98?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          platform: Unsplash
+      viewer:
+        link: https://www.neptunelabs.com/fsi-viewer/
+  fsi:
+    viewer: true
+  bootstrap:
+    icons: false

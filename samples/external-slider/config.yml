@@ -7,29 +7,27 @@ overview:
     - JS built FSI Viewer
     - external slider
     - zoom and pan
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/misc-menu.yml
-      highlight: DEAL OF THE DAY
-      featured: true
-      footer:
-        credits:
-          photos:
-            - author: Jonny Caspari
-              link: https://unsplash.com/@jonnysplsh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-              platform: Unsplash
-            - author: max fuchs
-              link: https://unsplash.com/@designfuchs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-              platform: Unsplash
-            - author: William Moreland
-              link: https://unsplash.com/@relentlessjpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-              platform: Unsplash
-          viewer:
-            link: https://www.neptunelabs.com/fsi-viewer/
-      fsi:
-        viewer: true
-      bootstrap:
-        icons: false
+  menu:
+    data: misc-menu.yml
+  highlight: DEAL OF THE DAY
+  featured: true
+  footer:
+    credits:
+      photos:
+        - author: Jonny Caspari
+          link: https://unsplash.com/@jonnysplsh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          platform: Unsplash
+        - author: max fuchs
+          link: https://unsplash.com/@designfuchs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          platform: Unsplash
+        - author: William Moreland
+          link: https://unsplash.com/@relentlessjpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          platform: Unsplash
+      viewer:
+        link: https://www.neptunelabs.com/fsi-viewer/
+  fsi:
+    viewer: true
+  bootstrap:
+    icons: false

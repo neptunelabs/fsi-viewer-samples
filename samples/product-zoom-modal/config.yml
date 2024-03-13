@@ -7,26 +7,24 @@ overview:
     - JS built FSI Viewer
     - zoom and pan
     - modal implementation
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/furniture-menu.yml
-      highlight: HIGHLIGHT OF THE DAY
-      featured:
-        template: data/furniture-featured.yml
-      categories: true
-      footer:
-        credits:
-          photos:
-            author: various artists
-            link: https://pixabay.com/
-            platform: Pixabay
-          viewer:
-            link: https://www.neptunelabs.com/fsi-viewer/
-      hero: false
-      fsi:
-        viewer: true
-      bootstrap:
-        icons: true
+  menu:
+    data: furniture-menu.yml
+  highlight: HIGHLIGHT OF THE DAY
+  featured:
+    data: furniture-featured.yml
+  categories: true
+  footer:
+    credits:
+      photos:
+        author: various artists
+        link: https://pixabay.com/
+        platform: Pixabay
+      viewer:
+        link: https://www.neptunelabs.com/fsi-viewer/
+  hero: false
+  fsi:
+    viewer: true
+  bootstrap:
+    icons: true
