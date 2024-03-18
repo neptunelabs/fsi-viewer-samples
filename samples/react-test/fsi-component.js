@@ -41,7 +41,6 @@ class FSIComponent extends React.Component {
     }
   }
 
-
   getParameters(){
     return {...this.getDefaultParameters(), ...this.props, ...{tagName:null}}
   }
@@ -50,7 +49,6 @@ class FSIComponent extends React.Component {
   componentWillUnmount() {
     this.destroyInstance();
   }
-
 
   shouldComponentUpdate(nextProps){
     const toIgnore = this.getIgnoredProps();

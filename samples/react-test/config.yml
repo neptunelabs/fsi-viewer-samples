@@ -8,6 +8,8 @@ overview:
     - FSI Component
 schema: react-taupe
 sample:
+  hero:
+    data: clothing-hero.yml
   menu:
     data: clothing-menu.yml
   featured:
