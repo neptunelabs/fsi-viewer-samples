@@ -27,4 +27,4 @@ sample:
     viewer: true
   bootstrap:
     icons: true
-  jquery: true
+
