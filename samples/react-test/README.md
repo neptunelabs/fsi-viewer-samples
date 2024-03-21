@@ -1,12 +1,12 @@
 # Using FSI Viewer with React
 
-If you want to use the FSI viewer with React, we recommend that you create an FSI component to ensure that the viewers are initialised correctly.
+If you want to use the FSI Viewer with React, we recommend that you create an FSI component to ensure that the viewers are initialised correctly.
 
 Simply embedding the viewers as a component may work, but will cause problems as the viewer will be initialised in the shadow DOM and changes will not be recognised.
 
 This sample shows a sample FSI component and how it is embedded. As this is a standalone sample, the embedding is slightly different.
 
-In `fsi-component.js' you will find the class that extends the React component. You can read more about this in the corresponding documentation section [Creating the FSI Component](https://docs.neptunelabs.com/docs/fsi-viewer/using-with-react).
+In `fsi-component.js` you will find the class that extends the React component. You can read more about this in the corresponding documentation section [Creating the FSI Component](https://docs.neptunelabs.com/docs/fsi-viewer/using-with-react).
 
 You can use this FSIComponent in two ways, either directly in the files or as a separate component.
 In `sample.js` it is directly embedded:
