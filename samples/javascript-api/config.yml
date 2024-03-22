@@ -1,22 +1,23 @@
 overview:
-  title: No Interface Version
+  title: JavaScript API
   image: logo.png
-  description: Shows how a simple no interface product zoom version looks.
-  order: 3
+  description: Learn how to use the JavaScript Viewer API with a simple demo.
+  order: 97
   facts:
     - JS built FSI Viewer
-    - zoom and pan
-    - minimalist no interface version
+    - JS API Demonstration
 schema: bootstrap-taupe
 sample:
   menu:
     data: clothing-menu.yml
+  featured:
+    data: clothing-featured.yml
   highlight: DEAL OF THE DAY
   footer:
     credits:
       photos:
-        - author: Kate Skumen
-          link: https://unsplash.com/@skumen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+        - author: Artem Bondarchuk
+          link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
           platform: Unsplash
       viewer:
         link: https://www.neptunelabs.com/fsi-viewer/

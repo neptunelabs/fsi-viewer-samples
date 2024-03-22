@@ -2,5 +2,6 @@
 title: 'FSI Viewer'
 projectURL: https://www.neptunelabs.com/fsi-viewer/
 originAssetPath: viewer
+schema: overview-taupe
 playground:
   stackblitz: fsi-viewer-samples

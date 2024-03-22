@@ -1,14 +1,15 @@
 overview:
-  title: Simple Product Zoom
+  title: React
   image: logo.png
-  description: Shows how a simple product detail page could look with FSI Viewer used.
-  order: 1
+  description: Shows how FSI components can be implemented in React.
+  order: 98
   facts:
-    - JS built FSI Viewer
-    - zoom and pan
-    - plain menu
-schema: bootstrap-taupe
+    - Sample component containing FSI ThumbBar
+    - FSI Component
+schema: react-taupe
 sample:
+  hero:
+    data: clothing-hero.yml
   menu:
     data: clothing-menu.yml
   featured:
