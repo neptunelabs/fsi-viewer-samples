@@ -7,7 +7,7 @@
 ---
 
 * [Live Samples @ GitHub Pages 🔗][GHPages]
-* [FSI Layers - Product Page 🔗](https://www.neptunelabs.com/fsi-viewer/)
+* [FSI Viewer - Product Page 🔗](https://www.neptunelabs.com/fsi-viewer/)
 * [Documentation 🔗][Docs]
 
 The zoom viewer provides a minimalist, highly customisable user interface that is easily adaptable via CSS, supported by lightning-fast real-time image delivery from the FSI Server.
